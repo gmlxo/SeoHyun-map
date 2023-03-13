@@ -15,6 +15,6 @@
 학생들이 모여 만든 팀 입니다.
 
 ## Team members
-팀장: <a href="https://github.com/gmlxo" style="color: #000;">양희태</a> _ 프론트, 백엔드 <br>
-팀원: <a href="https://github.com/dbstarjun" style="color: #000;">유성준</a> _ 프론트, 백엔드 <br>
-&nbsp;&nbsp;&nbsp;<a href="https://github.com/N1kdg" style="color: #000;">김동건</a> _ 백엔드
+팀장: <a href="https://github.com/gmlxo">양희태</a> _ 프론트, 백엔드 <br>
+팀원: <a href="https://github.com/dbstarjun">유성준</a> _ 프론트, 백엔드 <br>
+&#9;<a href="https://github.com/N1kdg">김동건</a> _ 백엔드
