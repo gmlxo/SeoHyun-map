@@ -12,7 +12,7 @@ Map website for Yangyoung Digital students
 
 ## Project introduction
 This team consists of students currently enrolled in the software development department<br>
-at YoungYang Digital High School.
+at Yangyoung Digital High School.
 
 ## Team members
 <pre>
