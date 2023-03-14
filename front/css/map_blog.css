@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #999;
+}
+
+header>.header-logo {
+    width: 200px;
+}
+
+.menu {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    margin: auto;
+    top: 50px;
+    left: calc(100% - 60%);
+}
+.menu>ul {
+    margin: auto;
+}
+.menu>ul>li {
+    padding: 5px 30px 5px 30px;
+    float: left;
+    text-align: center;
+}
+
+.menu>ul>li>a {
+    color: #555;
+    font-size: 25px;
+}
+
+.menu>ul>li:hover {
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+
+.menu>ul>li:hover a {
+    font-size: 30px;
+}
+
+.sign {
+    border: 1px solid;
+    float: right;
+    margin-right: 10px;
+}
+
+
+
+.first-animation {
+    margin-top: 120px;
+    background-image: url("/img/다운로드.jpeg");
+    background-position: center;
+}
+.first-animation .inner {
+    height: 646px;
+    background-color: orange;
+
+}
+.first-animation .title {
+    position: absolute;
+    top: 88px;
+    left: -10px;
+}
+.first-animation .title .btn {
+
+}
+.first-animation .test1.img {
+    position: absolute;
+    bottom: 0;
+    right: -47px;
+}
+.first-animation .test1.text {
+    position: absolute;
+    top: 38px;
+    right: 171px;
+}
+.first-animation .test2.img {
+    position: absolute;
+    bottom: 0;
+    right: 162px;
+}
+.first-animation .test2.text {
+    position: absolute;
+    top: 321px;
+    right: 416px;
+}
+.first-animation .my-img {
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+}
