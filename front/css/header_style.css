@@ -5,18 +5,15 @@
     text-decoration: none;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100px;
-}
-
+/* header */
 header {
     position: relative;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #888;
 }
 
+/* 헤더 이미지 크기 */
 header>.header-logo {
     width: 200px;
 }
@@ -26,29 +23,27 @@ header>.header-logo {
     width: 500px;
     height: 45px;
     margin: auto;
-    top: 50px;
-    left: calc(100% - 60%);
+    top: 51px;
+    left: calc(100% - 65%);
 }
-.menu>ul {
-    margin: auto;
-}
-.menu>ul>li {
+
+.menu>li {
     padding: 5px 30px 5px 30px;
     float: left;
     text-align: center;
 }
 
-.menu>ul>li>a {
+.menu>li>a {
     color: #555;
     font-size: 25px;
 }
 
-.menu>ul>li:hover {
+.menu>li:hover {
     border-bottom: 3px solid #000;
     color: #000;
 }
 
-.menu>ul>li:hover a {
+.menu>li:hover a {
     font-size: 30px;
 }
 
@@ -57,3 +52,31 @@ header>.header-logo {
     float: right;
     margin-right: 10px;
 }
+.search {
+    float: left;
+}
+.search .sign-search {
+    position: relative;
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    /* font-size: 12px; */
+    transition: width .4s;
+}
+.searchHidden {
+    position: absolute;
+       
+}
+/* focus or hover */
+.search .sign-search:focus,
+.search .sign-search:hover {
+    width: 190px;
+    border: 2px solid #000
+}
+
