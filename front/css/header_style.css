@@ -59,8 +59,8 @@ header>.header-logo {
 
 .search>.sign-search {
     position: relative;
-    width: 36px;
-    height: 34px;
+    width: 50px;
+    height: 50px;
     padding: 4px 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -71,20 +71,22 @@ header>.header-logo {
     transition: width .4s;
 }
 
+/* search i con */
 .searchSpan {
     position: absolute;
     transform: translate3d(-30px, 5px, -7px);
     z-index: 9;
 }
 
-/* focus or hover */
+/* search input 동작 */
 .search>.sign-search:focus,
-.search>.sign-search:hover {
+.search>.sign-search:hover{
     width: 190px;
     border-color: #000;
 }
-
+/* search input 동작시 i con */
 .search>.sign-search:focus~span.searchSpan,
 .search>.sign-search:hover~span.searchSpan {
-    display: none;
+    /* 클릭 X */
+    pointer-events: none;
 }
