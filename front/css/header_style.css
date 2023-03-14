@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    justify-content: space-between;
+}
+
+header > .header-logo {
+    width: 200px;
+    height: 150px;
+    float: left;
+}
+
+
+.main-menu {
+    border: 1px solid;
+    width: calc(100% - 300px);
+    height: 150px;
+    float: right;
+}
+
+.menu {
+    width: 500px;
+    height: 150px;
+    margin: auto;
+
+}
+.menu > ul {
+    margin: auto;
+}
+.menu > ul > li {
+    padding: 5px 30px 5px 30px;
+    float: left;
+}
+
+.menu > ul > li > a {
+     color: #555;
+     font-size: 20px;
+}
+.menu > ul > li:hover {
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+.sign {
+    float: right;
+}
