@@ -63,13 +63,13 @@ header>.header-logo {
 
 .first-animation {
     margin-top: 120px;
-    background-image: url("/img/다운로드.jpeg");
+    background-image: url("/img/visual_bg.jpg");
     background-position: center;
 }
 .first-animation .inner {
     height: 646px;
     background-color: orange;
-
+    position: relative;
 }
 .first-animation .title {
     position: absolute;
