@@ -5,19 +5,15 @@
     text-decoration: none;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100px;
-}
-
+/* header */
 header {
     position: relative;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid #999;
-    z-index: 9;
+    border-bottom: 1px solid #888;
 }
 
+/* 헤더 이미지 크기 */
 header>.header-logo {
     width: 200px;
 }
@@ -27,38 +23,92 @@ header>.header-logo {
     width: 500px;
     height: 45px;
     margin: auto;
-    top: 50px;
-    left: calc(100% - 60%);
+    top: 51px;
+    left: calc(100% - 65%);
 }
-.menu>ul {
-    margin: auto;
-}
-.menu>ul>li {
+
+.menu>li {
     padding: 5px 30px 5px 30px;
     float: left;
     text-align: center;
 }
 
-.menu>ul>li>a {
+.menu>li>a {
     color: #555;
     font-size: 25px;
 }
 
-.menu>ul>li:hover {
+.menu>li:hover {
     border-bottom: 3px solid #000;
     color: #000;
 }
 
-.menu>ul>li:hover a {
+.menu>li:hover a {
     font-size: 30px;
 }
 
 .sign {
-    border: 1px solid;
+    /* border: 1px solid; */
     float: right;
-    margin-right: 10px;
+    margin: 22px 12px 0 0;
 }
 
+.search {
+    /* position: relative; */
+    margin: 0 auto;
+    float: left;
+}
+
+.search>.sign-search {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    /* color: #777; */
+    transition: width .4s;
+}
+
+/* search placeholder 가리기*/
+.search>.sign-search::placeholder {
+    color:transparent;
+}
+
+/* search i con */
+.searchSpan {
+    position: absolute;
+    transform: translate(-150%, 50%);
+    z-index: 9;
+}
+
+/* search input 동작 */
+.search>.sign-search:focus,
+.search>.sign-search:hover {
+    width: 190px;
+    border-color: #000;
+}
+
+/* search input 동작시 i con */
+.search>.sign-search:focus~span.searchSpan,
+.search>.sign-search:hover~span.searchSpan {
+    /* 클릭 X */
+    pointer-events: none;
+}
+/* search input 동작시 search input plceholder */
+/* .search>.sign-search:focus::placeholder, */
+.search>.sign-search:hover::placeholder {
+    color: #777;
+}
+
+.proFile {
+    margin-top: -5px;
+    font-size: 60px;
+    position: relative;
+}
 
 
 
@@ -178,6 +228,9 @@ body {
     position: absolute;
     top: 88px;
     left: -10px;
+  }
+  img {
+    z-index: 999;
   }
   .first-animation .title .btn {
     position: absolute;
