@@ -48,12 +48,14 @@ header>.header-logo {
 }
 
 .sign {
-    border: 1px solid;
-    margin: auto;
+    /* border: 1px solid; */
     float: right;
-    margin-right: 10px;
+    margin: 22px 12px 0 0;
 }
+
 .search {
+    /* position: relative; */
+    margin: 0 auto;
     float: left;
 }
 
@@ -67,26 +69,43 @@ header>.header-logo {
     border-radius: 5px;
     outline: none;
     background-color: #fff;
-    color: #777;
+    /* color: #777; */
     transition: width .4s;
+}
+
+/* search placeholder 가리기*/
+.search>.sign-search::placeholder {
+    color:transparent;
 }
 
 /* search i con */
 .searchSpan {
     position: absolute;
-    transform: translate3d(-30px, 5px, -7px);
+    transform: translate(-150%, 50%);
     z-index: 9;
 }
 
 /* search input 동작 */
 .search>.sign-search:focus,
-.search>.sign-search:hover{
+.search>.sign-search:hover {
     width: 190px;
     border-color: #000;
 }
+
 /* search input 동작시 i con */
 .search>.sign-search:focus~span.searchSpan,
 .search>.sign-search:hover~span.searchSpan {
     /* 클릭 X */
     pointer-events: none;
+}
+/* search input 동작시 search input plceholder */
+/* .search>.sign-search:focus::placeholder, */
+.search>.sign-search:hover::placeholder {
+    color: #777;
+}
+
+.proFile {
+    margin-top: -5px;
+    font-size: 60px;
+    position: relative;
 }
