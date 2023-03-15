@@ -166,50 +166,50 @@ body {
   }
 
   /*VISUAL*/
-  .visual {
+  .first-animation {
     margin-top: 120px;
-    background-image: url("../images/visual_bg.jpg");
+    background-image: url("/img/visual_bg.jpg");
     background-position: center;
   }
-  .visual .inner {
+  .first-animation .inner {
     height: 646px;
   }
-  .visual .title {
+  .first-animation .title {
     position: absolute;
     top: 88px;
     left: -10px;
   }
-  .visual .title .btn {
+  .first-animation .title .btn {
     position: absolute;
     top: 259px;
     left: 173px;
   }
-  .visual .cup1.image {
+  .first-animation .test1.img {
     position: absolute;
     bottom: 0;
     right: -47px;
   }
-  .visual .cup1.text {
+  .first-animation .test1.text {
     position: absolute;
     top: 38px;
     right: 171px;
   }
-  .visual .cup2.image {
+  .first-animation .test2.img {
     position: absolute;
     bottom: 0;
     right: 162px;
   }
-  .visual .cup2.text {
+  .first-animation .test2.img {
     position: absolute;
     top: 321px;
     right: 416px;
   }
-  .visual .spoon {
+  .first-animation .my-img {
     position: absolute;
     bottom: 0;
     left: 275px;
   }
-  .visual .fade-in {
+  .first-animation .fade-in {
     opacity: 0;
   }
   
