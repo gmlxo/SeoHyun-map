@@ -6,39 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--브라우저 스타일 초기화-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-    <!--Google Fonts - 나눔고딕-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <!--GSAP & ScrollToPlugin-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"
-        integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q=="
-        crossorigin="anonymous"></script>
-    <!--Swiper-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-    <!--ScrollMagic-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-    <!--Lodash-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
-        integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
-        crossorigin="anonymous"></script>
-
     <!-- css 연결 -->
     <link rel="stylesheet" href="/css/map_blog.css">
+    
     <!-- jquery -->
-    <script src="/js/jquery-3.1.1.js"></script>
+    <!-- <script src="/js/jquery-3.1.1.js"></script> -->
+    
     <!-- js 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/map_blog.js"></script>
+    
     <!-- 외부 아이콘(메타리얼 아이콘) -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -74,7 +54,7 @@
         <!-- 순차적 애니메이션 -->
         <section class="first-animation">
             <div class="inner">
-                <div class="title">
+                <div class="title fade-in">
                     <img src="/img/visual_title.png" alt="테스트용도 이미지 대체 이미지 찾으면 바꿀것" />
                     <a href="javascript:void(0)" class="btn">자세히 보기</a>
                 </div>
@@ -89,7 +69,6 @@
                 <div class="fade-in">
                     <img src="/img/visual_spoon.png" alt="테스트용도 이미지 대체 이미지 찾으면 바꿀것" class="my-img" />
                 </div>
-                
             </div>
         </section>
 
@@ -207,7 +186,7 @@
         
         
           <!--SEASON PRODUCT-->
-          <section class="season-product scroll-spy">
+          <!-- <section class="season-product scroll-spy">
             <div class="inner">
         
               <img src="./images/floating3.png" alt="Icon" class="floating floating3" />
@@ -222,11 +201,11 @@
               </div>
         
             </div>
-          </section>
+          </section> -->
         
         
           <!--RESERVE COFFEE-->
-          <section class="reserve-coffee scroll-spy">
+          <!-- <section class="reserve-coffee scroll-spy">
             <div class="inner">
         
               <img src="./images/reserve_logo.png" alt="" class="reserve-logo back-to-position to-right delay-0" />
@@ -239,7 +218,7 @@
               <img src="./images/reserve_image.png" alt="" class="product back-to-position to-left delay-3" />
         
             </div>
-          </section>
+          </section> -->
         
         
           <!--PICK YOUR FAVORITE-->
@@ -255,31 +234,10 @@
               </div>
         
             </div>
-          </section>
-        
-        
-          <!--RESERVE STORE-->
-          <section class="reserve-store">
-            <div class="inner">
-        
-              <div class="medal">
-                <div class="front">
-                  <img src="./images/reserve_store_medal_front.png" alt="R">
-                </div>
-                <div class="back">
-                  <img src="./images/reserve_store_medal_back.png" alt="스타벅스 리저브 매장">
-                  <a href="javascript:void(0)" class="btn">
-                    매장안내
-                  </a>
-                </div>
-              </div>
-        
-            </div>
-          </section>
-        
+          </section>    
         
           <!--FIND THE STORE-->
-          <section class="find-store scroll-spy">
+          <!-- <section class="find-store scroll-spy">
             <div class="inner">
         
               <img src="./images/find_store_texture1.png" alt="" class="texture1" />
@@ -295,58 +253,7 @@
               </div>
         
             </div>
-          </section>
-        
-        
-          <!--AWARDS-->
-          <section class="awards">
-            <div class="inner">
-        
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide1.jpg" alt="대통령 표창" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide2.jpg" alt="대통령 표창 (3년 연속)" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide3.jpg" alt="우수사업주 인증" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide4.jpg" alt="경연대회 대상" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide5.jpg" alt="대한상의회장상" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide6.jpg" alt="기업사회공헌 활동 부문" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide7.jpg" alt="KSI 1위 (5년 연속)" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide8.jpg" alt="KS-SQI 1위 (5년 연속)" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide9.jpg" alt="커피전문점 부문 (4년 연속)" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./images/awards_slide10.jpg" alt="동반성장 부문 (4년 연속)" />
-                  </div>
-                </div>
-              </div>
-        
-              <div class="swiper-prev">
-                <span class="material-icons">arrow_back</span>
-              </div>
-              <div class="swiper-next">
-                <span class="material-icons">arrow_forward</span>
-              </div>
-        
-            </div>
-          </section>
-        
+          </section> -->
 
     </div>
 </body>

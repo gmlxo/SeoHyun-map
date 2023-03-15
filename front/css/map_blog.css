@@ -113,7 +113,7 @@ header>.header-logo {
 
 
 /*COMMON*/
-body {
+/* body {
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -125,15 +125,15 @@ body {
   }
   img {
     /* img(인라인 요소) 하단에 Baseline 공백을 제거 */
-    display: block;
-  }
+    /* display: block;
+  } */
   
   /*INNER*/
-  .inner {
+   .inner {
     width: 1100px;
     margin: 0 auto;
     position: relative;
-  }
+  } 
   
   /*BUTTON*/
   .btn {
@@ -220,6 +220,7 @@ body {
     margin-top: 120px;
     background-image: url("/img/visual_bg.jpg");
     background-position: center;
+    
   }
   .first-animation .inner {
     height: 646px;
@@ -228,9 +229,6 @@ body {
     position: absolute;
     top: 88px;
     left: -10px;
-  }
-  img {
-    z-index: 999;
   }
   .first-animation .title .btn {
     position: absolute;
@@ -264,8 +262,18 @@ body {
   }
   .first-animation .fade-in {
     opacity: 0;
+    /* animation: fade-in1 1s 3s forwards; */
   }
   
+  /* @keyframes fade-in1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  } */
   
   /*NOTICE*/
   /*NOTICE LINE*/
