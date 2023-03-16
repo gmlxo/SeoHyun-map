@@ -50,7 +50,7 @@ header>.header-logo {
 .sign {
     /* border: 1px solid; */
     float: right;
-    margin: 22px 30px 0 0;
+    margin: 22px 30px 0 0;  
 }
 
 .search {
@@ -76,7 +76,7 @@ header>.header-logo {
 /* search placeholder 가리기*/
 .search>.sign-search::placeholder {
     /* 글씨 색 없애 주는? */
-    color:transparent;
+    color: transparent;
 }
 
 /* search i con */
@@ -99,27 +99,38 @@ header>.header-logo {
     /* 클릭 X */
     pointer-events: none;
 }
+
 /* search input 동작시 search input plceholder */
 /* .search>.sign-search:focus::placeholder, */
 .search>.sign-search:hover::placeholder {
     color: #777;
 }
 
-.proFile { 
+.proFile {
     margin-top: -5px;
     font-size: 60px;
-    position: relative;
 }
 
 .profile-menu {
-    position: absolute;
+    margin-top: 100px;
+    float: right;
+    width: 110px;
+    border-radius: 5px;
     background-color: #fff;
+    border: 1.5px solid;
 }
 
-.profile-menu>ul {
-    border: 1px solid;
+
+.profile-menu>ul>li {
+    padding: 2px 4px 6px;
 }
 
-.menu-li-line {
-    border-bottom: 1px solid #888;
+.profile-menu>ul>li>a {
+    font-size: 15px;
+    color: #777;
+}
+
+.profile-menu>ul>li>a:hover {
+    color: #000;
+    font-size: 17px;
 }
