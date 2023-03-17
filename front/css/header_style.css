@@ -3,11 +3,14 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    color: #000;
 }
 
 /* header */
 header {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100px;
     border-bottom: 1px solid #888;
@@ -18,13 +21,17 @@ header>.header-logo {
     width: 200px;
 }
 
+.ju {
+    /* border: 1px solid; */
+    width: 600px;
+    margin: auto;
+}
+
 .menu {
-    position: absolute;
     width: 500px;
     height: 45px;
-    margin: auto;
-    top: 51px;
-    left: calc(100% - 65%);
+    margin-top: 47px;
+    float: right;
 }
 
 .menu>li {
@@ -48,13 +55,17 @@ header>.header-logo {
 }
 
 .sign {
-    /* border: 1px solid; */
+    width: 250px;
+    margin: 22px 30px 0 0; 
+    height: 50px; 
+    /* border: 1px solid red; */
+}
+
+.sign-box {
     float: right;
-    margin: 22px 30px 0 0;  
 }
 
 .search {
-    /* position: relative; */
     margin: 0 auto;
     float: left;
 }
@@ -107,13 +118,14 @@ header>.header-logo {
 }
 
 .proFile {
+    position: relative;
     margin-top: -5px;
     font-size: 60px;
 }
 
 .profile-menu {
-    margin-top: 100px;
-    float: right;
+    display: none;
+    position: absolute;
     width: 110px;
     border-radius: 5px;
     background-color: #fff;
@@ -128,6 +140,7 @@ header>.header-logo {
 .profile-menu>ul>li>a {
     font-size: 15px;
     color: #777;
+    display: block;
 }
 
 .profile-menu>ul>li>a:hover {

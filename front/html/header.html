@@ -8,8 +8,8 @@
     <!-- google icon -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="/js/jquery-3.1.1.js"></script>
     <link rel="stylesheet" href="/css/header_style.css">
+    <script src="/js/jquery-3.1.1.js"></script>
     <title>header</title>
 </head>
 
@@ -18,32 +18,37 @@
         <header>
             <img src="https://pngimage.net/wp-content/uploads/2018/05/example-logo-png-1.png" alt="logo"
                 class="header-logo">
+            <div class="ju">
                 <ul class="menu">
                     <li><a href="#">main</a></li>
                     <li><a href="#">main</a></li>
                     <li><a href="#">main</a></li>
                     <li><a href="#">main</a></li>
                 </ul>
+            </div>
             <div class="sign">
-                <div class="search">
-                    <!-- 검색 아이콘 -->
-                    <input type="text" class="sign-search" placeholder="search">
-                    <span class="material-symbols-outlined searchSpan" >search</span>
-                </div>
-                <!-- 프로필 아이콘 -->
-                <span class="material-symbols-outlined proFile">account_box</span>
-                <div class="profile-menu">
-                    <ul>
-                        <li><a href="#">your proFile</a></li>
-                        <hr>
-                        <li><a href="#">sign in</a></li>
-                        <li><a href="#">sign up</a></li>
-                        <li><a href="#">sign out</a></li>
-                    </ul>
+                <div class="sign-box">
+                    <div class="search">
+                        <!-- 검색 아이콘 -->
+                        <input type="text" class="sign-search" placeholder="search">
+                        <span class="material-symbols-outlined searchSpan">search</span>
+                    </div>
+                    <!-- 프로필 아이콘 -->
+                    <a href="#" class="material-symbols-outlined proFile">account_box</a>
+                    <div class="profile-menu">
+                        <ul>
+                            <li><a href="#">your proFile</a></li>
+                            <hr>
+                            <li><a href="#">sign in</a></li>
+                            <li><a href="#">sign up</a></li>
+                            <li><a href="#">sign out</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
     </div>
+    <script src="/js/header-jQuery.js"></script>
 </body>
 
 </html>
