@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
     text-decoration: none;
     color: #000;
 }
@@ -30,7 +31,7 @@ header>.header-logo {
 .menu {
     width: 500px;
     height: 45px;
-    margin-top: 47px;
+    margin-top: 46px;
     float: right;
 }
 
@@ -63,6 +64,7 @@ header>.header-logo {
 
 .sign-box {
     float: right;
+    margin-right: 44px;
 }
 
 .search {
@@ -93,7 +95,7 @@ header>.header-logo {
 /* search i con */
 .searchSpan {
     position: absolute;
-    transform: translate(-150%, 50%);
+    transform: translate(-150%, 50%);   
     z-index: 9;
 }
 
@@ -118,14 +120,17 @@ header>.header-logo {
 }
 
 .proFile {
-    position: relative;
+    /* position: relative; */
     margin-top: -5px;
     font-size: 60px;
+    display: block;
 }
 
 .profile-menu {
     display: none;
+    /* opacity: 0; */
     position: absolute;
+    right: 30px;
     width: 110px;
     border-radius: 5px;
     background-color: #fff;
@@ -141,9 +146,14 @@ header>.header-logo {
     font-size: 15px;
     color: #777;
     display: block;
+    line-height: 20px;
 }
 
 .profile-menu>ul>li>a:hover {
     color: #000;
     font-size: 17px;
+}
+
+.profile-menu>ul {
+    display: block;
 }
