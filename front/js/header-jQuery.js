@@ -1,22 +1,26 @@
-var header = $(".proFile");
-var menu = $(".profile-menu");
+window.onload = hoverMenu();
 
-$(header).hover(
-    function () {
-        // over
-        $(menu).stop().slideDown("fast");
-    }, function () {
-        // out
-        $(menu).stop().slideUp("fast");
-    }
-);
+function hoverMenu() {
+    var header = $(".proFile");
+    var menu = $(".profile-menu");
 
-$(menu).hover(
-    function () {
-        // over
-        $(menu).stop().slideDown("fast");
-    }, function () {
-        // out
-        $(menu).stop().slideUp("fast");
-    }
-);
+    $(header).hover(
+        function () {
+            // over
+            $(menu).stop().slideDown("fast");
+        }, function () {
+            // out
+            $(menu).stop().slideUp("fast");
+        }
+    );
+    
+    $(menu).hover(
+        function () {
+            // over
+            $(menu).stop().slideDown("fast");
+        }, function () {
+            // out
+            $(menu).stop().slideUp("fast");
+        }
+    );
+}
