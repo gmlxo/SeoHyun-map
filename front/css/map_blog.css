@@ -147,17 +147,118 @@ header>.header-logo {
   color: #000;
   font-size: 17px;
 }
- 
-/*css 초기화*/
-section {
-  display: flex;
-}
-.cardlocation {
+
+/* 슬라이드 */
+.slide {
+  width: 1200px;
+  height: 300px;
+  z-index: -99;
   position: relative;
+  overflow: hidden;
+  margin: auto;
+  animation: opacity 3s forwards;
+  left: 100%;
 }
 
-.coardlocation_1 {
+.slide > img {
+  width: 1200px;
+  height: 300px;
   position: absolute;
+  left: 100%;
+  top: 0;
+  animation: slide2 9s infinite forwards;
+  animation-delay: 3s;
+}
+.slide > img:first-child {
+  animation: slide1 9s infinite forwards;
+  animation-delay: 3s;
+  left: 0;
+}
+.slide > img:nth-child(2) {
+  animation: slide2 9s infinite forwards;
+  animation-delay: 3s;
+}
+.slide > img:last-child {
+  animation: slide2 9s infinite forwards;
+  animation-delay: 6s;
+}
+
+@keyframes opacity {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  100%{
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide1 {
+  0%{
+    opacity: 1;
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  33.3%{
+    left: -100%;
+  }
+  66.5%{
+    opacity: 1;
+    left: -100%;
+  }
+  66.6%{
+    opacity: 0;
+    left: -100%;
+  }
+  66.7%{
+    left: 100%;
+  }
+  86.6%{
+    left: 100%;
+  }
+  100%{
+    opacity: 1;
+    left: 0%;
+  }
+}
+@keyframes slide2 {
+  0%{
+    opacity: 1;
+    left: 100%;
+  }
+  20% {
+    left: 100%;
+  }
+  33.3%{
+    left: 0%;
+  }
+  53.3%{
+    left: 0%;
+  }
+  66.6%{
+    left: -100%;
+  }
+  66.7%{
+    opacity: 1;
+    left: -100%;
+  }
+  86.6%{
+    opacity: 0;
+    left: -100%;
+  }
+  100%{
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+
+/*카드*/
+section {
+  display: flex;
 }
 
 .card {
@@ -200,15 +301,6 @@ section {
     padding: 10px 10px;
     line-height: 20px;
 }
-
-/* h1 {
-    font-size: 22px;
-    font-weight: bold;
-} */
-
-/* .card-body {
-
-} */
 
 .card-body-header{
 	line-height: 25px;
@@ -259,12 +351,13 @@ section {
 .reg_date {
 	float: right;
 }
-
+.pa-box{
+  padding-left: 100px;
+}
 .fade-in {
     opacity: 0;
-    animation: fade-in1 1s 3s forwards;
+    animation: fade-in1 .3s 1s forwards;
 }
-
 @keyframes fade-in1{
     0% {
         opacity: 0;
@@ -273,3 +366,30 @@ section {
         opacity: 1;
     }
 }
+
+.fade-in2 {
+  opacity: 0;
+  animation: fade-in2 .3s 1.8s forwards;
+}
+@keyframes fade-in2{
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+.fade-in3 {
+  opacity: 0;
+  animation: fade-in3 .3s 2.4s forwards;
+}
+@keyframes fade-in3{
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+} 
