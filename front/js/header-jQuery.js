@@ -15,7 +15,7 @@ function hoverMenu() {
             $(menu).stop().slideUp("fast");
         }
     );
-    
+
     $(menu).hover(
         function () {
             // over
@@ -25,4 +25,8 @@ function hoverMenu() {
             $(menu).stop().slideUp("fast");
         }
     );
+}
+
+function locationPopUp() {
+    window.open("/Terms_of_Use/location_based.html", "location pop", "width = 1000px, left = 1000, location = no");
 }
