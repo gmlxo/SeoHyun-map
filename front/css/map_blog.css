@@ -149,6 +149,17 @@ header>.header-logo {
 }
  
 /*css 초기화*/
+section {
+  display: flex;
+}
+.cardlocation {
+  position: relative;
+}
+
+.coardlocation_1 {
+  position: absolute;
+}
+
 .card {
 	height: 400px;
 	width: 350px;
