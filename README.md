@@ -7,15 +7,17 @@ Map website for Yangyoung Digital students
 ## Tool used
 <img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=for-the-badge&logo=Eclipse IDE&logoColor=white"> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white"> 
 
-## Map API
+## map API
 <img src="https://img.shields.io/badge/Kakao-FFCD00?style=for-the-badge&logo=Kakao&logoColor=black"> 
+
+## I con 
+<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 
 ## Project introduction
 This team consists of students currently enrolled in the software development department<br>
 at Yangyoung Digital High School.
 
 ## Team members
-<pre>
-Leader :  <a href="https://github.com/gmlxo">Yang Hee-tae</a> _ backend, front 
-members : <a href="https://github.com/dbstarjun">Yoo Sungjun</a> _ backend, front 
-          <a href="https://github.com/N1kdg">Kim Donggun</a> _ backend </pre>
+Leader :  <a href="https://github.com/gmlxo">Yang Hee-tae</a> _ backend, front <br>
+members : <a href="https://github.com/dbstarjun">Yoo Sungjun</a> _ backend, front <br>
+>>  <a href="https://github.com/N1kdg">Kim Donggun</a> _ backend <br>

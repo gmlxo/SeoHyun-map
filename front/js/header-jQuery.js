@@ -1,4 +1,6 @@
-window.onload = hoverMenu();
+// window.onload = hoverMenu();
+
+window.addEventListener('load', hoverMenu())
 
 function hoverMenu() {
     var header = $(".proFile");
