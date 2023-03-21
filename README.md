@@ -18,6 +18,8 @@ This team consists of students currently enrolled in the software development de
 at Yangyoung Digital High School.
 
 ## Team members
+<pre>
 Leader :  <a href="https://github.com/gmlxo">Yang Hee-tae</a> _ backend, front <br>
 members : <a href="https://github.com/dbstarjun">Yoo Sungjun</a> _ backend, front <br>
->>  <a href="https://github.com/N1kdg">Kim Donggun</a> _ backend <br>
+          <a href="https://github.com/N1kdg">Kim Donggun</a> _ backend <br>
+</pre>
