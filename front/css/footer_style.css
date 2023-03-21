@@ -1,4 +1,62 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    color: #cacaca;
+}
+
 footer {
-    width: 100% ;
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+}
+
+.Icons-box {
+    padding-top: 30px;
+    float: right;
+    margin-right: 2.8%;
+}
+
+.icon-link>.bi {
+    padding-right: 7px;
+    width: 30px;
+    height: 30px;
+}
+
+.fh-box {
+    margin: 0 auto;
+    width: 95%;
+    justify-content: space-between;
+    padding-top: 43px;
+}
+
+.fl-box, .fh-box {
+    display: flex;
+}
+
+.bi-geo-alt-fill {
+    width: 12px;
+    height: 12px;
+}
+
+#copy {
+    margin-left: 20px;
+}
+
+.ff-box {
+    width: 95%;
+    margin: 0 auto;
     border-top: 1px solid;
+}
+
+.ff-address {
+    margin-top: 30px;
+}
+
+.ff-address span, .ff-address a {
+    font-size: .9em;
+    color: #888;
+}
+
+.ff-address a:hover {
+    color: #000;
 }
