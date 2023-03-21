@@ -19,7 +19,7 @@ at Yangyoung Digital High School.
 
 ## Team members
 <pre>
-Leader :  <a href="https://github.com/gmlxo">Yang Hee-tae</a> _ backend, front
+Leader :  <a href="https://github.com/gmlxo">Yang Heetae</a> _ backend, front
 members : <a href="https://github.com/dbstarjun">Yoo Sungjun</a> _ backend, front
           <a href="https://github.com/N1kdg">Kim Donggun</a> _ backen
 </pre>
