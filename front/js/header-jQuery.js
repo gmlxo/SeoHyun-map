@@ -1,6 +1,6 @@
 // window.onload = hoverMenu();
 
-window.addEventListener('load', hoverMenu())
+window.addEventListener('load', hoverMenu());
 
 function hoverMenu() {
     var header = $(".proFile");
@@ -27,18 +27,30 @@ function hoverMenu() {
     );
 }
 
-function locationPopUp() {
-    var value = document.getElementById("terms").getAttribute('value-number');
-    var htmlLink = "#";
-    if(value == 1) {
+function TermsPopUp() {
+    var terms = document.getElementsByClassName('terms-box')[0];
+    var value = terms.getElementsByTagName('a');
+
+    alert(document.getElementsByTagName('a')[2].id);
+    console.log(terms);
+    console.log(value);
+    
+    var htmlLink = null;
+
+    if(value == "terms1") {
         // 서비스 이용약관
         htmlLink = "/Terms_of_Use/service.html";
-    } else if(value == 2) {
+    } else if(value == "terms2") {
         // 개인정보처리방침
-        htmlLink = "#";
-    } else if(valuec == 3) {
+        htmlLink = null;
+        alert("아직 안함 좀만 ㄱㄷ");
+    } else if(value == "terms3") {
         // 위치 기반 서비스 이용약관
         htmlLink = "/Terms_of_Use/location_based.html";
+    } 
+    if(htmlLink != null) {
+        window.open(htmlLink, "location pop", "location = no");
     }
-    window.open(htmlLink, "location pop", "location = no");
+
+    return htmlLink, value, terms;
 }
