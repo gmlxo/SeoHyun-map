@@ -151,7 +151,7 @@ header>.header-logo {
 /* 슬라이드 */
 .slide {
   width: 1200px;
-  height: 300px;
+  height: 600px;
   z-index: -99;
   position: relative;
   overflow: hidden;
@@ -380,16 +380,73 @@ section {
   }
 }
 
-
-.fade-in3 {
+.fade-in2 {
   opacity: 0;
-  animation: fade-in3 .3s 2.4s forwards;
+  animation: fade-in2 .3s 2.0s forwards;
 }
-@keyframes fade-in3{
+@keyframes fade-in2{
   0% {
-    left: 100%;
+      opacity: 0;
   }
   100% {
-    left: 0%;
+      opacity: 1;
   }
-} 
+}
+
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+}
+
+.Icons-box {
+  padding-top: 30px;
+  float: right;
+  margin-right: 2.8%;
+}
+
+.icon-link>.bi {
+  padding-right: 7px;
+  width: 30px;
+  height: 30px;
+}
+
+.fh-box {
+  margin: 0 auto;
+  width: 95%;
+  justify-content: space-between;
+  padding-top: 43px;
+}
+
+.fl-box, .fh-box {
+  display: flex;
+}
+
+.bi-geo-alt-fill {
+  width: 12px;
+  height: 12px;
+}
+
+#copy {
+  margin-left: 20px;
+}
+
+.ff-box {
+  width: 95%;
+  margin: 0 auto;
+  border-top: 1px solid;
+}
+
+.ff-address {
+  margin-top: 30px;
+}
+
+.ff-address span, .ff-address a {
+  font-size: .9em;
+  color: #888;
+}
+
+.ff-address a:hover {
+  color: #fff;
+}
