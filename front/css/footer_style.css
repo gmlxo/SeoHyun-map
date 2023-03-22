@@ -10,6 +10,10 @@ footer {
     background-color: #000;
 }
 
+footer span, footer a, footer path {
+    color: #666;
+  }
+
 .Icons-box {
     padding-top: 30px;
     float: right;
@@ -57,6 +61,6 @@ footer {
     color: #888;
 }
 
-.ff-address a:hover {
-    color: #000;
+.ff-address a:hover, .Icons-box a:hover path {
+    color: #fff;
 }

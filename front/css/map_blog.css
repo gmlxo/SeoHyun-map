@@ -400,6 +400,10 @@ footer {
   background-color: #000;
 }
 
+footer span, footer a, footer path {
+  color: #666;
+}
+
 .Icons-box {
   padding-top: 30px;
   float: right;
