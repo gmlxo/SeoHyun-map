@@ -37,8 +37,7 @@ function termsPopUp(number) {
             htmlLink = "/Terms_of_Use/service.html";
             break;
         case "terms2": // 개인정보처리방침
-            alert("아직 안함 좀만 ㄱㄷ");
-            htmlLink = "/Terms_of_Use/location_based.html";
+            htmlLink = "/Terms_of_Use/privacy_policy.html";
             break;
         case "terms3": // 위치 기반 서비스 이용약관
             htmlLink = "/Terms_of_Use/location_based.html";

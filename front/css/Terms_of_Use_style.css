@@ -1,4 +1,10 @@
 * {
     list-style: none;
     text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    font-size: 16.5px;
+    color: #00f;
 }
