@@ -2,6 +2,7 @@
 
 window.addEventListener('load', hoverMenu());
 
+/* header menu hover */
 function hoverMenu() {
     var header = $(".proFile");
     var menu = $(".profile-menu");
@@ -15,7 +16,6 @@ function hoverMenu() {
             $(menu).stop().slideUp("fast");
         }
     );
-
     $(menu).hover(
         function () {
             // over
@@ -27,30 +27,27 @@ function hoverMenu() {
     );
 }
 
-function TermsPopUp() {
-    var terms = document.getElementsByClassName('terms-box')[0];
-    var value = terms.getElementsByTagName('a');
+/* footer 이용약관 새창 띄우기 */
+function termsPopUp(number) {
 
-    alert(document.getElementsByTagName('a')[2].id);
-    console.log(terms);
-    console.log(value);
-    
     var htmlLink = null;
 
-    if(value == "terms1") {
-        // 서비스 이용약관
-        htmlLink = "/Terms_of_Use/service.html";
-    } else if(value == "terms2") {
-        // 개인정보처리방침
-        htmlLink = null;
-        alert("아직 안함 좀만 ㄱㄷ");
-    } else if(value == "terms3") {
-        // 위치 기반 서비스 이용약관
-        htmlLink = "/Terms_of_Use/location_based.html";
-    } 
-    if(htmlLink != null) {
-        window.open(htmlLink, "location pop", "location = no");
+    switch (number) {
+        case "terms1": // 서비스 이용약관
+            htmlLink = "/Terms_of_Use/service.html";
+            break;
+        case "terms2": // 개인정보처리방침
+            alert("아직 안함 좀만 ㄱㄷ");
+            htmlLink = "/Terms_of_Use/location_based.html";
+            break;
+        case "terms3": // 위치 기반 서비스 이용약관
+            htmlLink = "/Terms_of_Use/location_based.html";
+            break;
+        default:
+            console.error('JS Terms : ' + number);
+            return htmlLink, terms;
     }
+    window.open(htmlLink, "location pop", "location = no");
 
-    return htmlLink, value, terms;
+    return htmlLink, terms;
 }
