@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#map {
+    width: 100%;
+    height: 700px;
+}
+
+/* version 2 css */
+.map-wrap {
+    width: 253px;
+    height: 133px;
+    margin-top: -170px /* !important */;
+    margin-left: 300px /* !important */;
+    background-color: #fff;
+}
