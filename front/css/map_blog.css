@@ -6,10 +6,6 @@
   color: #000;
 }
 
-iframe {
-  border: none;
-}
-
 /* header */
 header {
   position: relative;
@@ -60,8 +56,8 @@ header>.header-logo {
 
 .sign {
   width: 250px;
-  margin: 22px 30px 0 0;
-  height: 50px;
+  margin: 22px 30px 0 0; 
+  height: 50px; 
   /* border: 1px solid red; */
 }
 
@@ -153,18 +149,18 @@ header>.header-logo {
 }
 
 /* 슬라이드 */
-div.slide {
+.slide {
   width: 1200px;
   height: 600px;
   z-index: -99;
   position: relative;
   overflow: hidden;
   margin: auto;
-  animation: slideMain 3s infinite forwards;
+  animation: opacity 3s forwards;
   left: 100%;
 }
 
-.wrapper div.slide>img {
+.slide > img {
   width: 1200px;
   height: 300px;
   position: absolute;
@@ -173,106 +169,87 @@ div.slide {
   animation: slide2 9s infinite forwards;
   animation-delay: 3s;
 }
-
-.wrapper div.slide>img:first-child {
+.slide > img:first-child {
   animation: slide1 9s infinite forwards;
   animation-delay: 3s;
   left: 0;
 }
-
-.wrapper div.slide>img:nth-child(2) {
+.slide > img:nth-child(2) {
   animation: slide2 9s infinite forwards;
   animation-delay: 3s;
 }
-
-.wrapper div.slide>img:last-child {
+.slide > img:last-child {
   animation: slide2 9s infinite forwards;
   animation-delay: 6s;
 }
 
-@keyframes slideMain {
+@keyframes opacity {
   0% {
     left: 100%;
     opacity: 0;
   }
-
-  100% {
+  100%{
     left: 0%;
     opacity: 1;
   }
 }
 
 @keyframes slide1 {
-  0% {
+  0%{
     opacity: 1;
     left: 0%;
   }
-
   20% {
     left: 0%;
   }
-
-  33.3% {
+  33.3%{
     left: -100%;
   }
-
-  66.5% {
+  66.5%{
     opacity: 1;
     left: -100%;
   }
-
-  66.6% {
+  66.6%{
     opacity: 0;
     left: -100%;
   }
-
-  66.7% {
+  66.7%{
     left: 100%;
   }
-
-  86.6% {
+  86.6%{
     left: 100%;
   }
-
-  100% {
+  100%{
     opacity: 1;
     left: 0%;
   }
 }
-
 @keyframes slide2 {
-  0% {
+  0%{
     opacity: 1;
     left: 100%;
   }
-
   20% {
     left: 100%;
   }
-
-  33.3% {
+  33.3%{
     left: 0%;
   }
-
-  53.3% {
+  53.3%{
     left: 0%;
   }
-
-  66.6% {
+  66.6%{
     left: -100%;
   }
-
-  66.7% {
+  66.7%{
     opacity: 1;
     left: -100%;
   }
-
-  86.6% {
+  86.6%{
     opacity: 0;
     left: -100%;
   }
-
-  100% {
+  100%{
     opacity: 0;
     left: 100%;
   }
@@ -285,146 +262,150 @@ section {
 }
 
 .card {
-  height: 400px;
-  width: 350px;
-  border-radius: 15px;
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  overflow: hidden;
+	height: 400px;
+	width: 350px;
+	border-radius: 15px;
+	display: inline-block;
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	overflow: hidden;
 }
-
 .card-header {
-  -webkit-transition: 0.5s;
-  /*사파리 & 크롬*/
-  transition: 0.5s;
-  width: 100%;
-  height: 270px;
-  border-radius: 15px 15px 0 0;
-  background-image: url("images/korea.jpeg");
-  background-size: 100% 280px;
-  background-repeat: no-repeat;
+	-webkit-transition: 0.5s; /*사파리 & 크롬*/
+    transition: 0.5s;
+	width: 100%;
+	height: 270px;
+	border-radius: 15px 15px 0 0;
+	background-image: url("images/korea.jpeg");
+	background-size: 100% 280px;
+	background-repeat: no-repeat;	
 }
 
-.card:hover .card-header {
-  opacity: 0.8;
-  height: 100px;
+.card:hover .card-header  {
+	opacity: 0.8;
+	height: 100px;
 }
 
-.card-header-is_closed {
-  background-color: #EF5A31;
-  color: #FFF;
-  font-weight: bold;
-  text-align: center;
-  float: right;
-  margin: 15px 15px 0 0;
-  border-radius: 50%;
-  font-weight: bold;
-  padding: 10px 10px;
-  line-height: 20px;
+.card-header-is_closed{
+    background-color: #EF5A31 ;
+    color: #FFF ;
+    font-weight: bold ;
+    text-align: center ;
+    float: right;
+    margin: 15px 15px 0 0;
+    border-radius: 50%;
+    font-weight: bold;
+    padding: 10px 10px;
+    line-height: 20px;
 }
 
-.card-body-header {
-  line-height: 25px;
-  margin: 10px 20px 0px 20px;
+.card-body-header{
+	line-height: 25px;
+	margin: 10px 20px 0px 20px;
 }
 
-.card-body-description {
-  opacity: 0;
-  color: #757B82;
-  line-height: 25px;
-  -webkit-transition: .2s ease-in-out;
-  /*사파리&크롬*/
-  transition: .2s ease-in-out;
-  overflow: hidden;
-  height: 180px;
-  margin: 5px 20px;
+.card-body-description  {
+    opacity: 0;
+    color: #757B82;
+    line-height: 25px;
+    -webkit-transition: .2s ease-in-out; /*사파리&크롬*/
+    transition : .2s ease-in-out;
+    overflow: hidden;
+	height: 180px;
+	margin: 5px 20px;
 }
 
 .card:hover .card-body-description {
-  opacity: 1;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -ms-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  overflow: scroll;
+    opacity: 1;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition : .5s ease-in-out;
+    overflow: scroll;
 }
 
 .card-body-hashtag {
-  color: #000;
-  font-style: italic;
+	color: #000;
+	font-style: italic;
 }
-
 .card-body-nickname {
+    color: #000;
+    font-style: italic;
+}
+
+.ju-card {
+  margin-top: 30px;
+}
+
+.card-body-contents {
   color: #000;
   font-style: italic;
+  float: left;
 }
 
-.card-body-footer {
-  position: absolute;
-  margin-top: 15px;
-  margin-bottom: 6px;
-  bottom: 0;
-  width: 314px;
-  font-size: 14px;
-  color: #9FA5A8;
-  padding: 0 15px;
-}
-
-.reg_date {
+.card-body-star {
+  color: #ff1200;
+  font-style: italic;
   float: right;
 }
 
-.pa-box {
+.card-body-footer {
+  	position: absolute; 
+  	margin-top: 15px;
+  	margin-bottom: 6px;
+    bottom: 0; 
+    width: 314px;
+    font-size: 14px;
+    color: #9FA5A8;
+    padding: 0 15px;
+}
+
+.reg_date {
+	float: right;
+}
+.pa-box{
   padding-left: 100px;
 }
-
-div.fade-in {
-  opacity: 0;
-  animation: fade-in1 .3s 1s forwards;
-}
-
-@keyframes fade-in1 {
-  0% {
+.fade-in {
     opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+    animation: fade-in1 .3s 1s forwards;
+}
+@keyframes fade-in1{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-/* div.fade-in2 {
+.fade-in2 {
   opacity: 0;
   animation: fade-in2 .3s 1.8s forwards;
 }
-
-@keyframes fade-in2 {
+@keyframes fade-in2{
   0% {
-    opacity: 0;
+      opacity: 0;
   }
-
   100% {
-    opacity: 1;
+      opacity: 1;
   }
-} */
+}
 
-div.fade-in2 {
+.fade-in2 {
   opacity: 0;
   animation: fade-in2 .3s 2.0s forwards;
 }
-
-@keyframes fade-in2 {
+@keyframes fade-in2{
   0% {
-    opacity: 0;
+      opacity: 0;
   }
-
   100% {
-    opacity: 1;
+      opacity: 1;
   }
 }
 
@@ -435,9 +416,7 @@ footer {
   background-color: #000;
 }
 
-footer span,
-footer a,
-footer path {
+footer span, footer a, footer path {
   color: #666;
 }
 
@@ -460,8 +439,7 @@ footer path {
   padding-top: 43px;
 }
 
-.fl-box,
-.fh-box {
+.fl-box, .fh-box {
   display: flex;
 }
 
@@ -484,8 +462,7 @@ footer path {
   margin-top: 30px;
 }
 
-.ff-address span,
-.ff-address a {
+.ff-address span, .ff-address a {
   font-size: .9em;
   color: #888;
 }

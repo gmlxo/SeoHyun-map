@@ -94,9 +94,11 @@ header>.header-logo {
 }
 
 /* search i con */
-.searchSpan {
+.searchSvg {
     position: absolute;
-    transform: translate(-150%, 50%);   
+    width: 30px;
+    height: 30px;
+    transform: translate(-135%, 32%); 
     z-index: 9;
 }
 
@@ -108,8 +110,8 @@ header>.header-logo {
 }
 
 /* search input 동작시 i con */
-.search>.sign-search:focus~span.searchSpan,
-.search>.sign-search:hover~span.searchSpan {
+.search>.sign-search:focus~span.searchSvg,
+.search>.sign-search:hover~span.searchSvg {
     /* 클릭 X */
     pointer-events: none;
 }
