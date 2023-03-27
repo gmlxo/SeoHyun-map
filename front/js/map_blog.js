@@ -11,8 +11,4 @@ function autoslide() {
     },1000,function() {
         $(this).css({left:"0%"});
     });
-    // sno++;
-    // $(slide[sno]).animate({
-    //     left:"0"
-    // },1000);
 }
