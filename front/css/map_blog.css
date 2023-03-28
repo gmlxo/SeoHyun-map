@@ -148,7 +148,7 @@ header>.header-logo {
   font-size: 17px;
 }
 
-/* 슬라이드 */
+/* 상단 슬라이드 시작 */
 .slide {
   width: 1200px;
   height: 600px;
@@ -173,14 +173,6 @@ header>.header-logo {
   animation: slide1 9s infinite forwards;
   animation-delay: 3s;
   left: 0;
-}
-.slide > img:nth-child(2) {
-  animation: slide2 9s infinite forwards;
-  animation-delay: 3s;
-}
-.slide > img:last-child {
-  animation: slide2 9s infinite forwards;
-  animation-delay: 6s;
 }
 
 @keyframes opacity {
@@ -221,10 +213,35 @@ header>.header-logo {
   }
   100%{
     opacity: 1;
-    left: 0%;
+    left: 100%;
   }
 }
-@keyframes slide2 {
+/* 상단슬라이드 종료 */
+
+
+ /* 하단 슬라이드 시작 
+ .slide2 {
+  width: 1200px;
+  height: 600px;
+  z-index: -99;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  animation: opacity 3s forwards;
+  left: 100%;
+}
+
+.slide2 > img {
+  width: 1200px;
+  height: 300px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  animation: slide2 9s infinite forwards;
+  animation-delay: 3s;
+} 
+
+ @keyframes slide2 {
   0%{
     opacity: 1;
     left: 100%;
@@ -253,7 +270,9 @@ header>.header-logo {
     opacity: 0;
     left: 100%;
   }
-}
+} 
+
+하단슬라이드 마무리 */
 
 
 /*카드*/
@@ -469,4 +488,20 @@ footer span, footer a, footer path {
 
 .ff-address a:hover {
   color: #fff;
+}
+
+.commentbox{
+  width: 800px;
+  height: 500px;
+  border: 1px solid #333;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.comment{
+  text-align: center;
+  width: 750px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 200px 0px 2px 3px;
 }
