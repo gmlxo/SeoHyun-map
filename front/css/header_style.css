@@ -144,17 +144,18 @@ header {
     display: block;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 950px) {
     .header-menu {
         left: 30%;
     }    
 }
 
-/* @media (max-width: 1034px) and (min-width: 940px) {
+@media (max-width: 949px) and (min-width: 90px) {
     .header-menu {
-        left: 24%;
+        left: 26%;
     }    
 }
+/*
 @media (max-width: 939px) and (min-width: 925px) {
     .header-menu {
         left: 22.5%;
