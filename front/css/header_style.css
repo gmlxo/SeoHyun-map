@@ -27,11 +27,9 @@ header {
 
 .header-menu {
     position: absolute;
-    left: 30%;
-    width: 600px;
     top: 48px;
-    margin: auto;
 }
+
 
 .menu {
     width: 500px;
@@ -71,9 +69,17 @@ header {
 }
 
 .search {
-    /* margin: 0 auto; */
     float: left;
-    /* ma */
+}
+
+/* search i con */
+.searchSvg {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: translate(-135%, 32%);
+    z-index: 9;
+    pointer-events: none;
 }
 
 .search>.sign-search {
@@ -94,13 +100,10 @@ header {
     color: transparent;
 }
 
-/* search i con */
-.searchSvg {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    transform: translate(-135%, 32%);
-    z-index: 9;
+.proFileSvg {
+    margin-left: 5px;
+    width: 50px;
+    height: 50px;
 }
 
 /* search input 동작 */
@@ -110,28 +113,8 @@ header {
     border-color: #000;
 }
 
-/* search input 동작시 i con */
-.search>.sign-search:focus~span.searchSvg,
-.search>.sign-search:hover~span.searchSvg {
-    /* 클릭 X */
-    pointer-events: none;
-}
-
-/* search input 동작시 search input plceholder */
-/* .search>.sign-search:focus::placeholder, */
-.search>.sign-search:hover::placeholder {
-    color: #777;
-}
-
-.proFileSvg {
-    margin-left: 5px;
-    width: 50px;
-    height: 50px;
-}
-
 .profile-menu {
     display: none;
-    /* opacity: 0; */
     position: absolute;
     right: -28px;
     width: 110px;
@@ -160,3 +143,20 @@ header {
 .profile-menu>ul {
     display: block;
 }
+
+@media (min-width: 1000px) {
+    .header-menu {
+        left: 30%;
+    }    
+}
+
+/* @media (max-width: 1034px) and (min-width: 940px) {
+    .header-menu {
+        left: 24%;
+    }    
+}
+@media (max-width: 939px) and (min-width: 925px) {
+    .header-menu {
+        left: 22.5%;
+    }    
+} */

@@ -7,6 +7,7 @@
 footer {
     margin: 0 auto;
     width: 100%;
+    min-width: 350px;
     background-color: #000;
 }
 
@@ -22,16 +23,20 @@ footer {
     justify-content: space-between;
     padding-top: 43px;
 }
+
 .fh-maker {
     width: 170px;
 }
+
 .icon-link>.bi {
     padding-right: 7px;
     width: 30px;
     height: 30px;
 }
 
-footer span, footer a, footer path {
+footer span,
+footer a,
+footer path {
     font-size: 15px;
     color: #666;
 }
@@ -56,12 +61,14 @@ footer span, footer a, footer path {
     margin-top: 30px;
 }
 
-.ff-address span, .ff-address a {
+.ff-address span,
+.ff-address a {
     font-size: 14px;
     color: #888;
 }
 
-.ff-address a:hover, .Icons-box a:hover path {
+.ff-address a:hover,
+.Icons-box a:hover path {
     color: #fff;
 }
 
@@ -71,14 +78,17 @@ footer span, footer a, footer path {
 }
 
 /* width 1200px 이상시 */
-@media (min-width: 1070px) { 
+@media (min-width: 1070px) {
     footer {
         height: 200px;
     }
+
     .fl-box {
         width: 553px;
     }
-    .fl-box, .fh-box {
+
+    .fl-box,
+    .fh-box {
         display: flex;
     }
 
@@ -88,12 +98,12 @@ footer span, footer a, footer path {
 }
 
 /* width 601px 이상시 */
-@media (min-width: 601px) { 
+@media (max-width: 1069px) and (min-width: 601px) {
     footer {
-        height: 250px;
+        height: 230px;
     }
 
-    .terms-box{
+    .terms-box {
         margin-top: 2px;
     }
 
@@ -103,7 +113,7 @@ footer span, footer a, footer path {
 }
 
 /* width 601px 이상시 */
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
     footer {
         height: 330px;
     }
