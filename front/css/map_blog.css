@@ -6,6 +6,7 @@
   color: #000;
 }
 
+<<<<<<< HEAD
 /* header */
 header {
   position: relative;
@@ -149,6 +150,9 @@ header>.header-logo {
 }
 
 /* 상단 슬라이드 시작 */
+=======
+/* 슬라이드 */
+>>>>>>> 4864c58b2d5a94c22cb5b3916dc51f5a0b529ce1
 .slide {
   width: 1200px;
   height: 600px;
@@ -426,6 +430,7 @@ section {
   100% {
       opacity: 1;
   }
+<<<<<<< HEAD
 }
 
 
@@ -504,4 +509,6 @@ footer span, footer a, footer path {
   height: 50px;
   margin: 0 auto;
   padding: 200px 0px 2px 3px;
+=======
+>>>>>>> 4864c58b2d5a94c22cb5b3916dc51f5a0b529ce1
 }
