@@ -65,7 +65,63 @@
     opacity: 1;
     left: 0;
   }
-} 
+}
+
+/* 2번 슬라이드 시작 2번 슬라이드는 왼쪽에서 나와야 함
+.slide2 {
+  width: 1200px;
+  height: 600px;
+  z-index: -99;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide2 > img {
+  width: 1200px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: slideImg2 9s forwards;
+}
+
+@keyframes slideImg2 {
+  0%{
+    opacity: 0;
+    right: 100%;
+ }
+ 20% {
+  right: 100%;
+  }
+  33.3%{
+    right: 100%;
+  }
+  53.3%{
+    right: 100%;
+  }
+  66.6%{
+    right: 100%;
+  }
+  66.7%{
+    opacity: 1;
+    right: 100%;
+  }
+  86.6%{
+    opacity: 1;
+    right: 0;
+  }
+  100%{
+    opacity: 1;
+    right: 0;
+  }
+}
+2번 슬라이드 끝 */
+
+
+
+
+
 
 /*카드*/
 section {
