@@ -10,10 +10,7 @@
 /* header */
 header {
     position: relative;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    height: 100px;
     border-bottom: 1px solid #888;
 }
 
@@ -21,7 +18,7 @@ header {
     /* position: relative; */
     margin: 0 auto;
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     max-width: 1350px;
 }
 
@@ -114,7 +111,7 @@ header {
 .profile-menu {
     display: none;
     position: absolute;
-    right: -28px;
+    transform: translate(30px, 2.3px);
     width: 110px;
     border-radius: 5px;
     background-color: #fff;
@@ -138,9 +135,9 @@ header {
     font-size: 17px;
 }
 
-.profile-menu>ul {
+/* .profile-menu>ul {
     display: block;
-}
+} */
 
 .Test-links {
     position: absolute;
@@ -151,17 +148,21 @@ header {
     border: 1px solid #000;
 }
 
-/* @media (min-width: 950px) {
-    .header-menu {
-        left: 30%;
-    }    
+@media (min-width: 930px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-box {
+        height: 100px;
+    }
 }
 
-@media (max-width: 949px) and (min-width: 90px) {
-    .header-menu {
-        left: 26%;
-    }    
-} */
+@media (max-width: 929px) and (min-width: 90px) {
+    .header-box {
+        height: 300px;
+    }
+} 
 /*
 @media (max-width: 939px) and (min-width: 925px) {
     .header-menu {
