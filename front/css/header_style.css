@@ -22,11 +22,16 @@ header {
     max-width: 1350px;
 }
 
+.header-logo-img-link {
+    display: block;
+    width: 200px;
+    height: 99px;
+}
+
 .header-menu {
     position: absolute;
     width: 500px;
-    transform: translate(-50%, 0);
-    top: 48px;
+    transform: translate(-50%, -100%);
     left: 50%;
     height: 45px;
 }
@@ -54,7 +59,7 @@ header {
 
 .sign {
     width: 250px;
-    margin-top: 30px;
+    margin-top: -60px;
     height: 50px;
     float: right;
 }
@@ -135,10 +140,6 @@ header {
     font-size: 17px;
 }
 
-/* .profile-menu>ul {
-    display: block;
-} */
-
 .Test-links {
     position: absolute;
     left: 50%;
@@ -156,11 +157,17 @@ header {
     .header-box {
         height: 100px;
     }
+    .header-menu {
+        transform: translate(-50%, -100%);
+    }
 }
 
 @media (max-width: 929px) and (min-width: 90px) {
     .header-box {
-        height: 300px;
+        height: 150px;
+    }
+    .header-menu {
+        transform: translate(-50%, 15%);
     }
 } 
 /*
