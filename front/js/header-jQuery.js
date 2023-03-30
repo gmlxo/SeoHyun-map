@@ -2,7 +2,7 @@
 
 window.addEventListener('load', hoverMenu());
 
-/* header menu hover */
+/* header profile menu hover */
 function hoverMenu() {
     var header = $(".proFileSvg");
     var menu = $(".profile-menu");

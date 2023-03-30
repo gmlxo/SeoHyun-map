@@ -18,7 +18,7 @@ header {
 }
 
 .header-box {
-    position: relative;
+    /* position: relative; */
     margin: 0 auto;
     width: 100%;
     height: 100px;
@@ -27,34 +27,31 @@ header {
 
 .header-menu {
     position: absolute;
-    left: 50%;
-    top: 48px;
-}
-
-
-.menu {
     width: 500px;
+    transform: translate(-50%, 0);
+    top: 48px;
+    left: 50%;
     height: 45px;
 }
 
-.menu>li {
+.header-menu>li {
     width: 25%;
     padding: 5px 30px 5px 30px;
     float: left;
     text-align: center;
 }
 
-.menu>li>a {
+.header-menu>li>a {
     color: #555;
     font-size: 25px;
 }
 
-.menu>li:hover {
+.header-menu>li:hover {
     border-bottom: 3px solid #000;
     color: #000;
 }
 
-.menu>li:hover a {
+.header-menu>li:hover a {
     font-size: 30px;
 }
 
@@ -148,11 +145,13 @@ header {
 .Test-links {
     position: absolute;
     left: 50%;
+    width: 500px;
+    transform: translate(-50%, 0);
     height: 800px;
     border: 1px solid #000;
 }
 
-@media (min-width: 950px) {
+/* @media (min-width: 950px) {
     .header-menu {
         left: 30%;
     }    
@@ -162,7 +161,7 @@ header {
     .header-menu {
         left: 26%;
     }    
-}
+} */
 /*
 @media (max-width: 939px) and (min-width: 925px) {
     .header-menu {
