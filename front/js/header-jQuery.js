@@ -1,30 +1,42 @@
 // window.onload = hoverMenu();
 
-window.addEventListener('load', hoverMenu());
+window.addEventListener("load", hoverMenu());
+
 
 /* header profile menu hover */
-function hoverMenu() {
-    var header = $(".proFileSvg");
-    var menu = $(".profile-menu");
+var boolean = false;
 
-    $(header).hover(
+$(".sign-search").hover( function() {
+    boolean = false;
+}, function() {
+    boolean = true;
+});
+
+function hoverMenu(boolean) {
+
+    $(".proFileSvg").hover(
         function () {
+            console.log(boolean)
+            
             // over
-            $(menu).stop().slideDown("fast");
+            if (boolean) {
+                $(".profile-menu").stop().slideDown("fast");
+            }
         }, function () {
             // out
-            $(menu).stop().slideUp("fast");
+            $(".profile-menu").stop().slideUp("fast");
         }
     );
-    $(menu).hover(
+    $(".profile-menu").hover(
         function () {
             // over
-            $(menu).stop().slideDown("fast");
+            $(".profile-menu").stop().slideDown("fast");
         }, function () {
             // out
-            $(menu).stop().slideUp("fast");
+            $(".profile-menu").stop().slideUp("fast");
         }
     );
+    // return false;
 }
 
 /* footer 이용약관 새창 띄우기 */
