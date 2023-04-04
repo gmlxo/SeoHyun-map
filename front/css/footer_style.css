@@ -1,14 +1,9 @@
-* {
-    text-decoration: none;
-    list-style: none;
-    color: #cacacc;
-}
-
 footer {
     margin: auto;
     width: 100%;
     min-width: 350px;
     background-color: #000;
+    color: #cacacc;
 }
 
 .footer-box {

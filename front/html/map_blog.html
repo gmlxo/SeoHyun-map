@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>map blog</title>
-    <!-- css 연결 -->
+    <!-- google icon 연결 -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@2048,100700,01,-50200" />
-    <link rel="stylesheet" href="/css/map_blog.css">
+    <!-- main css 연결 -->
+    <link rel="stylesheet" href="/css/map_blog_main.css">
+    <!-- star css 연결 -->
     <link rel="stylesheet" href="/css/map_blog_star.css">
     <!-- js 연결 -->
     <script src="/js/jquery-3.1.1.js"></script>
@@ -23,13 +25,13 @@
         <header id="header"></header>
 
         <!-- 슬라이드 -->
-        <main>
+        <main class="map-blog">
             <div class="slide">
                 <img src="/img/1401810_20210409123407_100_0002.jpg" alt="img" height="300">
             </div>
-
+ 
             <!-- 카드 가게 소개 -->
-            <section class="card">
+            <section class="card-box">
                 <!-- 첫 번째 카드 -->
                 <a href="#">
                     <div class="fade-in pa-box">
@@ -85,12 +87,13 @@
                 <div class="inner">
                     <div class="medal">
                         <div class="front">
-                            <img src="/img/images.png" alt="" />
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" alt="" />
                         </div>
                         <div class="back">
-                            <img src="/img/images (1).png" />
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" />
                             <div class="starpoint_wrap">
                                 <div class="starpoint_box">
+                                    <span class="blind">0.5점</span></label>
                                     <label for="starpoint_1" class="label_star" title="0.5"><span
                                             class="blind">0.5점</span></label>
                                     <label for="starpoint_2" class="label_star" title="1"><span
@@ -134,7 +137,7 @@
             <!-- 댓글창 -->
             <section>
                 <!-- <div class="commentbox"> -->
-                <textarea class="test" placeholder="내용을 입력해 주세요." ></textarea>
+                <textarea class="test" placeholder="내용을 입력해 주세요."></textarea>
                 <!-- </div> -->
             </section>
         </main>
