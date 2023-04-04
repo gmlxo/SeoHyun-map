@@ -1,27 +1,22 @@
 // window.onload = hoverMenu();
 
-window.addEventListener("load", hoverMenu());
+window.addEventListener("load", /* notHover(),  */hoverMenu());
 
+
+// function notHover() {
+//     $(".search").hover(function(){
+//         $(".profile-menu").remove();
+//     }), function() {
+//         $(".profile-menu").append();
+//     }
+//   };
 
 /* header profile menu hover */
-var boolean = false;
-
-$(".sign-search").hover( function() {
-    boolean = false;
-}, function() {
-    boolean = true;
-});
-
-function hoverMenu(boolean) {
-
+function hoverMenu() {
     $(".proFileSvg").hover(
         function () {
-            console.log(boolean)
-            
             // over
-            if (boolean) {
-                $(".profile-menu").stop().slideDown("fast");
-            }
+            $(".profile-menu").stop().slideDown("fast");
         }, function () {
             // out
             $(".profile-menu").stop().slideUp("fast");

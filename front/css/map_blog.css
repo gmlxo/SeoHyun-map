@@ -9,20 +9,22 @@
 /* 슬라이드 */
 .slide {
   width: 1200px;
-  height: 600px;
+  /* height: 600px; 큰거 같아서 이미지 크기랑 같게 줄임 */
+  height: 300px;
   z-index: -99;
   position: relative;
   overflow: hidden;
   margin: auto;
+  border: 1px solid #000;
 }
 
 .slide>img {
   width: 1200px;
-  height: 300px;
   position: absolute;
   left: 0;
   top: 0;
-  animation: slideImg 9s forwards;
+  /* 9초 긴거 같아서 3초로 줄임 */
+  animation: slideImg 3s forwards;
 }
 
 /* @keyframes opacity {
@@ -386,7 +388,10 @@ perspective: 600px;
   overflow:hidden;
 }
 
-
 main {
-  height: 500px;
+  min-height : 100%;
+}
+/* footer */
+footer#footer {
+  bottom: 0;
 }
