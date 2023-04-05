@@ -1,11 +1,11 @@
-// window.onload = hoverMenu();
-
+/* loading 후 함수 실행 */
 window.addEventListener("load", hoverMenu());
 
 function hoverMenu() {
     $(".proFileSvg").hover(
         function () {
             // over
+            /* click css restart */
             $("input.sign-search").off('click');
             $("div.profile-menu").stop().slideDown("fast");
         }, function () {

@@ -5,12 +5,16 @@
   text-decoration: none;
   color: #000;
 }
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
 
 main.map-blog {
   margin: 0 auto;
-  width: 100%;
   /* widht 1350 이상으로 안 늘어남 */
   max-width: 1350px;
+  /* widht 420 이하로 안 줄어듬 */
   min-width: 420px;
 }
 
@@ -93,7 +97,9 @@ section.card-box {
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
+  /* 최대 크기 설정 */
   max-width: 1350px;
+  /* 최저 크기 설정 */
   min-width: 420px;
   /* border: 1px solid #000; */
 }
@@ -266,15 +272,17 @@ section.card-box {
   margin: 0 auto;
 }
 
-textarea {
-  text-align: center;
+textarea.test {
+  /* text-align: center; */
   width: 750px;
   height: 50px;
+  /* top 주실거면 margin-top 으로 주셔야 해요 */
   top: 280px;
   border: none;
   resize: none;
   border: 2px solid #ff2800;
-  margin-left: 500px;
+  /* 가운데 보내기 */
+  transform: translate(50%, 0);
 }
 
 /* 동전 회전 애니매이션 */

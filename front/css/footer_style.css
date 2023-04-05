@@ -62,8 +62,9 @@ footer path {
     color: #888;
 }
 
-.ff-address a:hover,
-.Icons-box a:hover path {
+footer a:hover,
+.fh-maker:hover span,
+.Icons-box>a:hover path {
     color: #fff;
 }
 

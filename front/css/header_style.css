@@ -105,12 +105,6 @@ header {
     border-color: #000;
 }
 
-div.search:focus~div.profile-menu,
-div.search:hover~div.profile-menu {
-    opacity: 0 !important;
-    display: none !important;
-}
-
 .profile-menu {
     display: none;
     position: absolute;
