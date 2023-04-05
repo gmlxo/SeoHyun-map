@@ -99,10 +99,16 @@ header {
 }
 
 /* search input 동작 */
-.search>.sign-search:focus,
+/* .search>.sign-search:focus, */
 .search>.sign-search:hover {
-    width: 190px;
+    width: 190px !important;
     border-color: #000;
+}
+
+div.search:focus~div.profile-menu,
+div.search:hover~div.profile-menu {
+    opacity: 0 !important;
+    display: none !important;
 }
 
 .profile-menu {
@@ -113,8 +119,8 @@ header {
     border-radius: 5px;
     background-color: #fff;
     border: 1.5px solid;
+    opacity: 1s;
 }
-
 
 .profile-menu>ul>li {
     padding: 2px 4px 6px;

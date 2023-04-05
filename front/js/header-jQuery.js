@@ -1,34 +1,25 @@
 // window.onload = hoverMenu();
 
-window.addEventListener("load", /* notHover(),  */hoverMenu());
+window.addEventListener("load", hoverMenu());
 
-
-// function notHover() {
-//     $(".search").hover(function(){
-//         $(".profile-menu").remove();
-//     }), function() {
-//         $(".profile-menu").append();
-//     }
-//   };
-
-/* header profile menu hover */
 function hoverMenu() {
     $(".proFileSvg").hover(
         function () {
             // over
-            $(".profile-menu").stop().slideDown("fast");
+            $("input.sign-search").off('click');
+            $("div.profile-menu").stop().slideDown("fast");
         }, function () {
             // out
-            $(".profile-menu").stop().slideUp("fast");
+            $("div.profile-menu").stop().slideUp("fast");
         }
     );
-    $(".profile-menu").hover(
+    $("div.profile-menu").hover(
         function () {
             // over
-            $(".profile-menu").stop().slideDown("fast");
+            $("div.profile-menu").stop().slideDown("fast");
         }, function () {
             // out
-            $(".profile-menu").stop().slideUp("fast");
+            $("div.profile-menu").stop().slideUp("fast");
         }
     );
     // return false;
