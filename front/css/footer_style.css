@@ -6,24 +6,24 @@ footer {
     color: #cacacc;
 }
 
-.footer-box {
+div.footer-box {
     margin: 0 auto;
     width: 100%;
     max-width: 1350px;
 }
 
-.fh-box {
+div.fh-box {
     margin: 0 auto;
     width: 95%;
     justify-content: space-between;
     padding-top: 43px;
 }
 
-.fh-maker {
+a.fh-maker {
     width: 170px;
 }
 
-.icon-link>.bi {
+a.icon-link>svg.bi {
     padding-right: 7px;
     width: 30px;
     height: 30px;
@@ -36,39 +36,39 @@ footer path {
     color: #666;
 }
 
-.bi-geo-alt-fill {
+svg.bi-geo-alt-fill {
     width: 12px;
     height: 12px;
 }
 
-#copy {
+span#copy {
     width: 380px;
     margin-left: 2%;
 }
 
-.ff-box {
+div.ff-box {
     width: 95%;
     margin: 0 auto;
     border-top: 1px solid #cacaca;
 }
 
-.ff-address {
+div.ff-address {
     margin-top: 30px;
 }
 
-.ff-address span,
-.ff-address a {
+div.ff-address span,
+div.ff-address a {
     font-size: 14px;
     color: #888;
 }
 
 footer a:hover,
-.fh-maker:hover span,
-.Icons-box>a:hover path {
+a.fh-maker:hover span,
+div.Icons-box>a:hover path {
     color: #fff;
 }
 
-.Icons-box {
+div.Icons-box {
     float: right;
     margin-right: 2.8%;
 }
@@ -79,16 +79,16 @@ footer a:hover,
         height: 200px;
     }
 
-    .fl-box {
+    div.fl-box {
         width: 553px;
     }
 
-    .fl-box,
-    .fh-box {
+    div.fl-box,
+    div.fh-box {
         display: flex;
     }
 
-    .Icons-box {
+    div.Icons-box {
         padding-top: 26px;
     }
 }
@@ -99,11 +99,11 @@ footer a:hover,
         height: 230px;
     }
 
-    .terms-box {
+    div.terms-box {
         margin-top: 2px;
     }
 
-    .Icons-box {
+    div.Icons-box {
         padding-top: 20px;
     }
 }
@@ -114,7 +114,7 @@ footer a:hover,
         height: 330px;
     }
 
-    .Icons-box {
+    div.Icons-box {
         padding-top: 25px;
     }
 }

@@ -7,6 +7,10 @@ function hoverMenu() {
             // over
             /* click css restart */
             $("input.sign-search").off('click');
+            $("input.sign-search").css({
+                "border": "1px solid #888 !important",
+                "color": "#fff"
+            });
             $("div.profile-menu").stop().slideDown("fast");
         }, function () {
             // out

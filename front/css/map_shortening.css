@@ -16,6 +16,17 @@
     transform: translate(-50%, 0);
 }
 
+/* 한줄로 만들기 */
 .flex {
     display: flex;
+}
+
+/* 왼쪽으로 보내기 */
+.left {
+    float: left;
+}
+
+/* 오른쪽으로 보내기 */
+.right {
+    float: right;
 }
