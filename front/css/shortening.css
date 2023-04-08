@@ -1,0 +1,21 @@
+/* 최대 최소 크기 지정 */
+.max-min {
+    max-width: 1350px;
+    min-width: 420px;
+}
+
+/* 가운데 보내기 */
+.margn {
+    margin: 0 auto;
+}
+
+/* 가운데 보내기 */
+.center-transform {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.flex {
+    display: flex;
+}

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/css/map_blog_main.css">
     <!-- star css 연결 -->
     <link rel="stylesheet" href="/css/map_blog_star.css">
+    <!-- shortening css 연결 -->
+    <link rel="stylesheet" href="/css/shortening.css">
     <!-- js 연결 -->
     <script src="/js/jquery-3.1.1.js"></script>
     <script async src="/js/map_blog.js"></script>
@@ -17,18 +19,18 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="wrapper" class="margn">
         <!-- header -->
         <header id="header"></header>
 
         <!-- 슬라이드 -->
-        <main class="map-blog">
+        <main class="map-blog max-min margn">
             <div class="slide">
                 <img src="/img/1401810_20210409123407_100_0002.jpg" alt="img" height="300">
             </div>
  
             <!-- 카드 가게 소개 -->
-            <section class="card-box">
+            <section class="card-box max-min margn flex">
                 <!-- 첫 번째 카드 -->
                 <a href="#">
                     <div class="fade-in pa-box">
@@ -81,7 +83,7 @@
 
             <!-- 별점 기능  -->
             <section class="reserve-store">
-                <div class="inner">
+                <div class="inner center-transform flex">
                     <div class="medal">
                         <div class="front">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEXKysyYhZ8TAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC" alt="" />
@@ -131,10 +133,8 @@
             </section>
 
             <!-- 댓글창 -->
-            <section>
-                <!-- <div class="commentbox"> -->
-                <textarea class="test" placeholder="내용을 입력해 주세요."></textarea>
-                <!-- </div> -->
+            <section class="comment-box center-transform">
+                <textarea class="test margn" placeholder="내용을 입력해 주세요."></textarea>
             </section>
         </main>
 

@@ -1,9 +1,56 @@
 /* 동그라미 만들기 */
-.reserve-store .back, .reserve-store .front {
+.reserve-store .back>img,
+.reserve-store .front>img {
   /* 둥글게 만들기 */
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #ff1200;
+}
+
+/* 동전 회전 애니매이션 */
+.reserve-store .inner {
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.reserve-store .medal .front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.reserve-store .medal .back {
+  transform: rotateY(-180deg);
+  position: relative;
+}
+
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front img,
+.back img {
+  height: 100%;
+  width: 100%;
 }
 
 /* 별점 */
