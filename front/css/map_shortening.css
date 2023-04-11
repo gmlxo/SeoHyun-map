@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+
+}
+
 /* 최대 최소 크기 지정 */
 .max-min {
     max-width: 1350px;
@@ -10,8 +19,7 @@
 }
 
 /* 가운데 보내기 */
-.center-transform {
-    position: relative;
+.center {
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -29,4 +37,21 @@
 /* 오른쪽으로 보내기 */
 .right {
     float: right;
+}
+
+/* 크기 넘어가면 감춤 */
+.overflow {
+    overflow: hidden;
+}
+
+/* 글자 가운데 */
+.text {
+    text-align: center;
+}
+
+/* footer */
+footer.footer-bottom {
+    /* 하단 고정 */
+    bottom: 0;
+    position: absolute;
 }

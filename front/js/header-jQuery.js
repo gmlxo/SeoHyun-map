@@ -2,7 +2,7 @@
 window.addEventListener("load", hoverMenu());
 
 function hoverMenu() {
-    $(".proFileSvg").hover(
+    $("svg.proFileSvg").hover(
         function () {
             // over
             /* click css restart */

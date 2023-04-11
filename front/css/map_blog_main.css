@@ -9,7 +9,6 @@
   height: 300px;
   z-index: -99;
   position: relative;
-  overflow: hidden;
   margin: auto;
   /* border: 1px solid #000; */
 }
@@ -89,7 +88,6 @@ section.card-box {
   margin-bottom: 30px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  overflow: hidden;
 }
 
 .card-header {
@@ -109,7 +107,7 @@ section.card-box {
   height: 100px;
 }
 
-.card-header-is_closed {
+/* .card-header-is_closed {
   background-color: #EF5A31;
   color: #FFF;
   font-weight: bold;
@@ -120,7 +118,7 @@ section.card-box {
   font-weight: bold;
   padding: 10px 10px;
   line-height: 20px;
-}
+} */
 
 .card-body-header {
   line-height: 25px;
@@ -134,7 +132,6 @@ section.card-box {
   -webkit-transition: .2s ease-in-out;
   /*사파리&크롬*/
   transition: .2s ease-in-out;
-  overflow: hidden;
   height: 180px;
   margin: 5px 20px;
 }
@@ -243,22 +240,16 @@ section.card-box {
 section.comment-box {
   width: 800px;
   height: 300px;
-  /* border: 1px solid #333; */
-  text-align: center;
 }
 
 textarea.test {
-  /* text-align: center; */
   width: 750px;
   height: 50px;
-  /* top 주실거면 margin-top 으로 주셔야 해요 _ 너무 아래로 내려가길래 지움*/
+  /* top 주실거면 margin-top or position 주셔야 해요 _ 너무 아래로 내려가길래 지움*/
   /* top: 280px; */
   border: none;
   resize: none;
   border: 2px solid #ff2800;
-  /* 가운데 보내기 */
-  /* left: 50%;
-  transform: translate(-50%, 0); */
 }
 
 /* footer */

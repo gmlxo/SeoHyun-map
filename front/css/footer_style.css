@@ -1,19 +1,10 @@
 footer {
-    margin: auto;
     width: 100%;
-    min-width: 350px;
     background-color: #000;
     color: #cacacc;
 }
 
-div.footer-box {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1350px;
-}
-
 div.fh-box {
-    margin: 0 auto;
     width: 95%;
     justify-content: space-between;
     padding-top: 43px;
@@ -48,7 +39,6 @@ span#copy {
 
 div.ff-box {
     width: 95%;
-    margin: 0 auto;
     border-top: 1px solid #cacaca;
 }
 
@@ -69,7 +59,6 @@ div.Icons-box>a:hover path {
 }
 
 div.Icons-box {
-    float: right;
     margin-right: 2.8%;
 }
 

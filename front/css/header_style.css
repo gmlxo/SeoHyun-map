@@ -1,13 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: #000;
-
-}
-
 div#wrapper {
+    position: relative;
     width: 100%;
 }
 
@@ -19,8 +11,6 @@ header {
 }
 
 div.header-box {
-    /* position: relative; */
-    margin: 0 auto;
     width: 98%;
     min-height: 100px;
     max-width: 1350px;
@@ -34,7 +24,6 @@ a.header-logo-img-link {
 
 ul.header-menu {
     position: absolute;
-    /* width: 500px; */
     transform: translate(-50%, -100%);
     left: 50%;
     height: 45px;
@@ -140,7 +129,6 @@ div.profile-menu>ul>li>a:hover {
 @media (min-width: 930px) {
     header {
         display: flex;
-        justify-content: space-between;
     }
     div.header-box {
         height: 100px;

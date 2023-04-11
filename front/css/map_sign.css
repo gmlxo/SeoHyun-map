@@ -1,0 +1,19 @@
+main#main-signUp-box, main#main-signIn-box {
+    position: relative;
+    color: #000;
+}
+
+main#main-signUp-box label.sign-label, main#main-signIn-box label.sign-label {
+    /* position: absolute; */
+    z-index: 9;
+}
+
+main#main-signUp-box input.sign-input, main#main-signIn-box input.sign-input {
+    /* position: absolute; */
+    z-index: -9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
