@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map blog</title>
+    <!-- main css 연결 -->
+    <link rel="stylesheet" href="/css/map_blog_main.css">
+    <!-- star css 연결 -->
+    <link rel="stylesheet" href="/css/map_blog_star.css">
+    <!-- shortening css 연결 -->
+    <link rel="stylesheet" href="/css/map_shortening.css">
+    <!-- js 연결 -->
+    <script src="/js/jquery-3.1.1.js"></script>
+    <!-- html_connection js 연결 -->
+    <script async src="/js/html_connection.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header"></header>
+
+    <!-- 슬라이드 -->
+    <main class="map-blog max-min margn"> 
+        <div class="slide overflow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+              </svg>
+            <!-- <img src="/img/1401810_20210409123407_100_0002.jpg" alt="img" height="300"> -->
+        </div>
+
+        <!-- 카드 가게 소개 -->
+        <section class="card-box max-min margn flex">
+            <!-- 첫 번째 카드 -->
+            <a href="#">
+                <div class="fade-in pa-box">
+                    <div class="card overflow">
+                        <div class="card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                              </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-header overflow">
+                                <p class="card-body-hashtag">#국수</p><!-- 음식명 나쁘지 않음 -->
+                                <p class="card-body-nickname"> 작성자: Superuser </p><!-- 작성자 말고 가격 쓰는게 어떰? -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- 두번째 카드  -->
+            <a href="#">
+                <div class="fade-in2 pa-box">
+                    <div class="card overflow">
+                        <div class="card-header">
+                            <img src="/img/menucardimg.2.jpg" alt="test" width="500" height="500">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-header overflow">
+                                <p class="card-body-hashtag">#돈까스 제육</p><!-- 음식명 나쁘지 않음 -->
+                                <p class="card-body-nickname"> 작성자: root </p><!-- 작성자 말고 가격 쓰는게 어떰? -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- 세번째 카드  -->
+            <a href="#">
+                <div class="fade-in3 pa-box">
+                    <div class="card overflow">
+                        <div class="card-header">
+                            <img src="/img/menucardimg3.webp" alt="test" width="500" height="500">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-header overflow">
+                                <p class="card-body-hashtag">#된장찌개</p><!-- 음식명 나쁘지 않음 -->
+                                <p class="card-body-nickname"> 작성자: admin </p> <!-- 작성자 말고 가격 쓰는게 어떰? -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- 별점 기능  -->
+        <section class="reserve-store">
+            <div class="inner center flex text">
+                <div class="medal">
+                    <div class="front">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEXKysyYhZ8TAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC"
+                            alt="" />
+                    </div>
+                    <div class="back">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" />
+                        <div class="starpoint_wrap"><!-- 평균 별점도 넣어주세요 -->
+                            <div class="starpoint_box">
+                                <label for="starpoint_1" class="label_star" title="0.5"><span
+                                        class="blind overflow">0.5점</span></label>
+                                <label for="starpoint_2" class="label_star" title="1"><span
+                                        class="blind overflow">1점</span></label>
+                                <label for="starpoint_3" class="label_star" title="1.5"><span
+                                        class="blind overflow">1.5점</span></label>
+                                <label for="starpoint_4" class="label_star" title="2"><span
+                                        class="blind overflow">2점</span></label>
+                                <label for="starpoint_5" class="label_star" title="2.5"><span
+                                        class="blind overflow">2.5점</span></label>
+                                <label for="starpoint_6" class="label_star" title="3"><span
+                                        class="blind overflow">3점</span></label>
+                                <label for="starpoint_7" class="label_star" title="3.5"><span
+                                        class="blind overflow">3.5점</span></label>
+                                <label for="starpoint_8" class="label_star" title="4"><span
+                                        class="blind overflow">4점</span></label>
+                                <label for="starpoint_9" class="label_star" title="4.5"><span
+                                        class="blind overflow">4.5점</span></label>
+                                <label for="starpoint_10" class="label_star" title="5"><span
+                                        class="blind overflow">5점</span></label>
+                                <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_3" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_4" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_5" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_6" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_7" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_8" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_9" class="star_radio">
+                                <input type="radio" name="starpoint" id="starpoint_10" class="star_radio">
+                                <span class="starpoint_bg"></span>
+                                <button><a href="#">제출</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 댓글창 -->
+        <section class="comment-box margn text">
+            <textarea class="test margn" placeholder="내용을 입력해 주세요."></textarea>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+</body>
+
+</html>
