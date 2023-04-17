@@ -10,7 +10,7 @@
     <!-- sub css 연결 -->
     <link rel="stylesheet" href="/css/map_shortening.css">
     <script src="/js/jquery-3.1.1.js"></script>
-    <script async src="/js/html_connection.js"></script>
+    <!-- <script async src="/js/html_connection.js"></script> -->
     <script async src="/js/sign.js"></script>
     
     <title>Document</title>
@@ -19,38 +19,39 @@
 <body>
     <div id="wrapper">
         <main id="main-signUp-box" class="margn max-min">
-            <h1>회원가입</h1>
+            <h1 class="text">회원가입</h1>
             <form accept="#" method="post" class="sign-box margn">
-                div.
-                <div class="id-box">
-                    <label class="sign-label id">id</label>
-                    <input type="text" name="user_id" id="" class="sign-input">
-                </div>
-                <div class="name-box">
-                    <label class="sign-label name">name</label>
-                    <input type="text" name="user_name" id="" class="sign-input">
-                </div>
-                <div class="pw-box">
-                    <label class="sign-label pw">password</label>
-                    <input type="password" name="user_pw" id="" class="sign-input"
-                        placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합">
-                </div>
-                <div class="mail-box">
-                    <label class="sign-label mail">mail</label>
-                    <input type="email" name="user_mail" id="" class="sign-input"  placeholder="ex) mail@mail.com">
-                </div>
-                <div class="phone-box">
-                    <label class="sign-label phone">phone</label>
-                    <input type="text" name="user_phone" id="" class="sign-input" placeholder="'-' 빼고 숫자만 입력">
-                </div>
-                <div class="joindate-box">
-                    <label class="sign-label joindate">생년월일</label>
-                    <input type="text" name="joindate" id="" class="sign-input" placeholder="YYYY-MM-DD" minlength="10">
+                <div class="sign-container">
+                    <div class="id-box margn">
+                        <label class="sign-label id">id</label>
+                        <input type="text" name="user_id" id="" class="sign-input center">
+                    </div>
+                    <div class="name-box margn">
+                        <label class="sign-label name">name</label>
+                        <input type="text" name="user_name" id="" class="sign-input">
+                    </div>
+                    <div class="pw-box margn">
+                        <label class="sign-label pw">password</label>
+                        <input type="password" name="user_pw" id="" class="sign-input"
+                            placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합">
+                    </div>
+                    <div class="mail-box margn">
+                        <label class="sign-label mail">mail</label>
+                        <input type="email" name="user_mail" id="" class="sign-input"  placeholder="ex) mail@mail.com">
+                    </div>
+                    <div class="phone-box margn">
+                        <label class="sign-label phone">phone number</label>
+                        <input type="text" name="user_phone" id="" class="sign-input" placeholder="'-' 빼고 숫자만 입력">
+                    </div>
+                    <div class="joindate-box margn">
+                        <label class="sign-label joindate">birth date</label>
+                        <input type="text" name="joindate" id="" class="sign-input" placeholder="YYYY-MM-DD" minlength="10">
+                    </div>
                 </div>
 
-                <div class="terms">
+                <div class="terms box-none">
                     <label for="" class="sign-label">약관</label>
-                    <div class="terms-box">
+                    <div class="terms-box margn">
                         <label for="terms_all"><input type="checkbox" name="terms_all" id="terms_all"> 전체 동의</label>
                         <hr color="#cacaca">
                         <label for="service">
@@ -87,8 +88,10 @@
                         </label>
                     </div>
                 </div>
-
-                <input type="submit" value="SIGN UP"> <input type="reset" value="RESET">
+                <div class="sign-btn-box box-none">
+                    <input type="submit" value="SIGN UP"> 
+                    <input type="reset" value="RESET">
+                </div>
             </form>
         </main>
         <footer id="footer" class="footer-bottom"></footer>

@@ -55,3 +55,7 @@ footer.footer-bottom {
     bottom: 0;
     position: absolute;
 }
+
+.box-none {
+    display: none;
+}

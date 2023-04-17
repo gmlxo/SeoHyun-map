@@ -1,19 +1,63 @@
-main#main-signUp-box, main#main-signIn-box {
-    position: relative;
+/* main css */
+#wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+main#main-signUp-box {
     color: #000;
 }
 
-main#main-signUp-box label.sign-label, main#main-signIn-box label.sign-label {
-    /* position: absolute; */
-    z-index: 9;
+main#main-signUp-box h1 {
+    margin-top: 20px;
 }
 
-main#main-signUp-box input.sign-input, main#main-signIn-box input.sign-input {
-    /* position: absolute; */
-    z-index: -9;
+/* form css */
+form.sign-box {
+    margin-top: 15px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* container 안 모든 div css */
+main#main-signUp-box div.sign-container>div{
+    position: relative;
+    padding-top: 20px;
+    width: 500px;
+    height: 67px;
+}
+
+
+/* sign up input css */
+main#main-signUp-box input.sign-input {
+    position: absolute;
+    width: 327px;
+    height: 47px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+    font-size: 1.1em;
+}
+
+/* sign up label css */
+main#main-signUp-box label.sign-label {
+    position: absolute;
+    transform: translate(0, -50%);
+    font-size: 1.28em;
+    left: 18.7%;
+    top: 50%;
+    z-index: 1;
+}
+/* placeholder 안 글씨 색 */
+main#main-signUp-box input.sign-input::placeholder {
+    color: #fff;
+}
+
+/* sign up input 안 text css */
+
+
+/* hover css */
+main#main-signUp-box input.sign-input:hover,
+main#main-signUp-box input.sign-input:focus {
+    border-bottom: 2.5px solid #00f;
 }
