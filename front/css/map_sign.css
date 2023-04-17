@@ -29,6 +29,7 @@ main#main-signUp-box div.sign-container>div{
 /* sign up input css */
 main#main-signUp-box input.sign-input {
     position: absolute;
+    transition: border-width 5s linear;
     width: 327px;
     height: 47px;
     transform: translate(-50%, 0);
@@ -58,6 +59,9 @@ main#main-signUp-box input.sign-input::placeholder {
 
 /* hover css */
 main#main-signUp-box input.sign-input:hover,
-main#main-signUp-box input.sign-input:focus {
-    border-bottom: 2.5px solid #00f;
+main#main-signUp-box input.sign-input:focus,
+main#main-signUp-box label.sign-label:hover~input.sign-input,
+main#main-signUp-box label.sign-label:focus~input.sign-input{
+    border-bottom: 2.5px solid #f00;
+    transform-origin: 0% 50%;
 }
