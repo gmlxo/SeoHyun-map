@@ -59,3 +59,7 @@ footer.footer-bottom {
 .box-none {
     display: none;
 }
+
+.border {
+    border: 1px solid #f00;
+}

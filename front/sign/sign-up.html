@@ -24,28 +24,30 @@
                 <div class="sign-container">
                     <div class="id-box margn">
                         <label class="sign-label id">id</label>
-                        <input type="text" name="user_id" id="" class="sign-input center">
+                        <input type="text" name="user_id" id="sign_user_id" class="sign-input center">
+                        <span class="notNull-sign box-none" id="sign_id_null">내용이 입력되지 않았습니다.</span>
                     </div>
                     <div class="name-box margn">
                         <label class="sign-label name">name</label>
-                        <input type="text" name="user_name" id="" class="sign-input">
+                        <input type="text" name="user_name" id="sign_user_name" class="sign-input">
+                        <span class="notNull-sign box-none" id="sign_name_null">내용이 입력되지 않았습니다.</span>
                     </div>
                     <div class="pw-box margn">
                         <label class="sign-label pw">password</label>
-                        <input type="password" name="user_pw" id="" class="sign-input"
+                        <input type="password" name="user_pw" id="sign_user_pw" class="sign-input"
                             placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합">
+                        <span class="notNull-sign box-none" id="sign_pw_null">내용이 입력되지 않았습니다.</span>
+                        <span class="notNull-sign box-none" id="sign_pw_no">보안이 취약합니다.</span>
                     </div>
                     <div class="mail-box margn">
                         <label class="sign-label mail">mail</label>
-                        <input type="email" name="user_mail" id="" class="sign-input"  placeholder="ex) mail@mail.com">
+                        <input type="email" name="user_mail" id="sign_user_mail" class="sign-input"  placeholder="ex) mail@mail.com">
+                        <span class="notNull-sign box-none" id="sign_mail_null">내용이 입력되지 않았습니다.</span>
                     </div>
                     <div class="phone-box margn">
                         <label class="sign-label phone">phone number</label>
-                        <input type="text" name="user_phone" id="" class="sign-input" placeholder="'-' 빼고 숫자만 입력">
-                    </div>
-                    <div class="joindate-box margn">
-                        <label class="sign-label joindate">birth date</label>
-                        <input type="text" name="joindate" id="" class="sign-input" placeholder="YYYY-MM-DD" minlength="10">
+                        <input type="text" name="user_phone" id="sign_user_phone" class="sign-input" placeholder="'-' 빼고 숫자만 입력">
+                        <span class="notNull-sign box-none" id="sign_phone_null">내용이 입력되지 않았습니다.</span>
                     </div>
                 </div>
 
