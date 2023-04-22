@@ -46,6 +46,10 @@ main#main-signUp-box input.sign-input~span {
     top: 76px;
 }
 
+main#main-signUp-box input.sign-input~span.pw-not-sign {
+    font-size: 11.3px;
+}
+
 /* sign up label css */
 main#main-signUp-box label.sign-label {
     position: absolute;
@@ -64,9 +68,9 @@ main#main-signUp-box input.sign-input::placeholder {
 
 
 /* hover css */
-/* main#main-signUp-box input.sign-input:hover,
-main#main-signUp-box input.sign-input:focus,
-main#main-signUp-box label.sign-label:hover~input.sign-input,
-main#main-signUp-box label.sign-label:focus~input.sign-input {
-    border-bottom-color: #00f;
-} */
+main#main-signUp-box input.sign-input:hover~label.sign-label,
+main#main-signUp-box input.sign-input:focus~label.sign-label,
+main#main-signUp-box label.sign-label:hover,
+main#main-signUp-box label.sign-label:focus {
+    color: #f00;
+}

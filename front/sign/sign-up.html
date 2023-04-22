@@ -35,9 +35,8 @@
                     <div class="pw-box margn">
                         <label class="sign-label pw">password</label>
                         <input type="password" name="user_pw" id="sign_user_pw" class="sign-input"
-                            placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합">
-                        <span class="notNull-sign box-none" id="sign_pw_null">내용이 입력되지 않았습니다.</span>
-                        <span class="notNull-sign box-none" id="sign_pw_no">보안이 취약합니다.</span>
+                            placeholder="8~30자리/영문 대소문자, 숫자, 특수문자 조합">
+                        <span class="notNull-sign pw-not-sign box-none" id="sign_pw_null"></span>
                     </div>
                     <div class="mail-box margn">
                         <label class="sign-label mail">mail</label>
@@ -57,7 +56,7 @@
                         <label for="terms_all"><input type="checkbox" name="terms_all" id="terms_all"> 전체 동의</label>
                         <hr color="#cacaca">
                         <label for="service">
-                            <input type="checkbox" name="service" id="service"> (필수) 서비스 이용약관 동의 
+                            <input type="checkbox" name="service" id="service" class="terms_checkbox"> (필수) 서비스 이용약관 동의 
                             <a href="/Terms_of_Use/service.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -65,7 +64,7 @@
                             </a>
                         </label><br>
                         <label for="privacy">
-                            <input type="checkbox" name="privacy" id="privacy"> (필수) 개인정보 수집 및 이용에 동의
+                            <input type="checkbox" name="privacy" id="privacy" class="terms_checkbox"> (필수) 개인정보 수집 및 이용에 동의
                             <a href="/Terms_of_Use/privacy_policy.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -73,7 +72,7 @@
                             </a>
                         </label><br>
                         <label for="location_based">
-                            <input type="checkbox" name="location_based" id="location_based"> (필수) 위치 기반 서비스 이용약관 동의
+                            <input type="checkbox" name="location_based" id="location_based" class="terms_checkbox"> (필수) 위치 기반 서비스 이용약관 동의
                                 <a href="/Terms_of_Use/location_based.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
@@ -81,7 +80,7 @@
                                 </a>
                             </label><br>
                         <label for="marketing">
-                            <input type="checkbox" name="marketing" id="marketing"> (선택) 마케팅 정보 수신 동의
+                            <input type="checkbox" name="marketing" id="marketing" class="terms_checkbox"> (선택) 마케팅 정보 수신 동의
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
