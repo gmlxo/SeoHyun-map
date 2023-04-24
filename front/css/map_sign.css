@@ -4,11 +4,15 @@
     padding: 0;
 }
 
-main#main-signUp-box {
+main#main-sign-box {
     color: #000;
 }
+main#main-sign-box_in.sign_in {
+    margin-top: 70px;
+}
 
-main#main-signUp-box h1.signUP_Title {
+/* sign page h1 */
+main#main-sign-box h1.sign_Title {
     margin-top: 20px;
 }
 
@@ -18,15 +22,17 @@ form.sign-box {
 }
 
 /* container 안 모든 div css */
-main#main-signUp-box div.sign-container>div{
+main#main-sign-box div.sign-container>div,
+main#main-sign-box_in div.sign-container>div {
     position: relative;
     padding-top: 20px;
     width: 50%;
     height: 63px;
 }
 
-/* sign up input css */
-main#main-signUp-box input.sign-input {
+/* sign input css */
+main#main-sign-box input.sign-input,
+main#main-sign-box_in input.sign-input {
     position: absolute;
     width: 67%;
     height: 47px;
@@ -38,7 +44,7 @@ main#main-signUp-box input.sign-input {
     font-size: 1.1em;
 }
 
-main#main-signUp-box input.sign-input~span {
+main#main-sign-box input.sign-input~span {
     position: absolute;
     font-size: .87em;
     color: #f00;
@@ -46,8 +52,9 @@ main#main-signUp-box input.sign-input~span {
     top: 76px;
 }
 
-/* sign up label css */
-main#main-signUp-box label.sign-label {
+/* sign  label css */
+main#main-sign-box label.sign-label,
+main#main-sign-box_in label.sign-label {
     position: absolute;
     transform: translate(0, -50%);
     font-size: 1.28em;
@@ -55,38 +62,39 @@ main#main-signUp-box label.sign-label {
     top: 50%;
     z-index: 1;
 }
-/* sign up input 안 text css */
-
 
 /* input and label hover css */
-main#main-signUp-box input.sign-input:hover~label.sign-label,
-main#main-signUp-box input.sign-input:focus~label.sign-label,
-main#main-signUp-box label.sign-label:hover,
-main#main-signUp-box label.sign-label:focus {
+main#main-sign-box input.sign-input:hover~label.sign-label,
+main#main-sign-box input.sign-input:focus~label.sign-label,
+main#main-sign-box label.sign-label:hover,
+main#main-sign-box label.sign-label:focus,
+main#main-sign-box_in input.sign-input:hover~label.sign-label,
+main#main-sign-box_in input.sign-input:focus~label.sign-label,
+main#main-sign-box_in label.sign-label:hover {
     font-size: .9em;
     top: 28%;
 }
 
 /* terms css  */
 div.terms {
-    width: 327px;
+    width: 34.2%;
     font-size: 1.1em;
     margin-top: 23px;
 }
 
 
-div.terms-box {
+div.terms-box_sign {
     height: 120px;
     margin-top: 5px;
     border-radius: 15px;
     border-color: #000;
 }
 
-div.terms-box>label {
+div.terms-box_sign>label {
     padding-left: 8px;
 }
 
-div.terms-box>label:nth-child(1) {
+div.terms-box_sign>label:nth-child(1) {
     display: block;
     margin-top: 5px;
 }
@@ -103,6 +111,12 @@ div.sign-btn-box>button {
     border: 1px solid #000;
     background-color: #fff;
     border-radius: 5px;
+}
+
+div.sign-btn-box>button#sign_in_submit {
+    justify-content: center;
+    display: block;
+    height: 40px;
 }
 
 div.sign-btn-box>button:hover {

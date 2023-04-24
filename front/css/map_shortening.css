@@ -50,7 +50,7 @@
 }
 
 /* footer */
-footer.footer-bottom {
+footer#footer.footer-bottom {
     /* 하단 고정 */
     bottom: 0;
     position: absolute;

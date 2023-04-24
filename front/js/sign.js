@@ -1,7 +1,7 @@
-sign_up_subit = false
+sign_up_subit = false;
 
 /* sign up */
-$("input#sign_user_pw").on("click keyup", function () {
+$("main#main-sign-box input#sign_user_pw").on("click keyup", function () {
     // input or span list
     var list = ["input#sign_user_pw", "span#sign_pw_null"];
     // password 가능 특수문자
@@ -37,16 +37,16 @@ function inputHideORShow(color, inputID, SPAN) {
     return sign_up_subit;
 }
 
-let input = document.querySelectorAll("input.sign-input");
-let span = document.querySelectorAll("span.notNull-sign");
-let label = document.querySelectorAll("label.sign-label");
+let input_up = document.querySelectorAll("main#main-sign-box input.sign-input");
+let span_up = document.querySelectorAll("main#main-sign-box span.notNull-sign");
+let label_up = document.querySelectorAll("main#main-sign-box label.sign-label");
 
-input.forEach((e, index) => {
+input_up.forEach((e, index) => {
     e.addEventListener("click", (e) => {
-        inputALLHideORShow(input[index], span[index], label[index]);
+        inputALLHideORShow(input_up[index], span[index], label[index]);
     });
     e.addEventListener("keyup", (e) => {
-        inputALLHideORShow(input[index], span[index], label[index]);
+        inputALLHideORShow(input_up[index], span[index], label[index]);
     });
 });
 
@@ -66,7 +66,7 @@ function inputALLHideORShow(inputID, inputSPAN, inputLABEL) {
 }
 
 /* 약관 */
-var terms_checkbox = ["#terms_all", "#terms_all:checked", "div.terms-box>label>input.terms_checkbox", "div.terms-box>label>input.terms_checkbox:checked", "input.checkbox_checked_class", "input.checkbox_checked_class:checked"];
+var terms_checkbox = ["#terms_all", "#terms_all:checked", "div.terms-box_sign>label>input.terms_checkbox", "div.terms-box_sign>label>input.terms_checkbox:checked", "input.checkbox_checked_class", "input.checkbox_checked_class:checked"];
 
 // 전체 선택 checkbox 클릭 시
 $(terms_checkbox[0]).click(function () {
@@ -86,13 +86,24 @@ $(terms_checkbox[2]).click(function () {
     }
 });
 
-/* sign up btton */
+/* sign up button */
 $("button#sign_up_submit").click(function() {
     console.error("SIGN UP : " + sign_up_subit);
-    for(var i=0; i<input.length; i++) {
-        if($(terms_checkbox[4]).length == $(terms_checkbox[5]).length && input[i] != "" && sign_up_subit) {    
+    for(var i=0; i<input_up.length; i++) {
+        if($(terms_checkbox[4]).length == $(terms_checkbox[5]).length && input_up[i] != "" && sign_up_subit) {    
             document.sign_up_frm.submit();
         }
     }
+});
 
+let input_in = document.querySelectorAll("main#main-sign-box_in input.sign-input");
+
+/* sign in button */
+$("button#sign_in_submit").click(function() {
+    console.error("SIGN IN : " + );
+    for(var i=0; i<input_in.length; i++) {
+        if(input_in[i] != "") {    
+            document.sign_in_frm.submit();
+        }
+    }
 });
