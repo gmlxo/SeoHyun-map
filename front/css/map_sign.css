@@ -8,7 +8,7 @@ main#main-signUp-box {
     color: #000;
 }
 
-main#main-signUp-box h1 {
+main#main-signUp-box h1.signUP_Title {
     margin-top: 20px;
 }
 
@@ -21,14 +21,14 @@ form.sign-box {
 main#main-signUp-box div.sign-container>div{
     position: relative;
     padding-top: 20px;
-    width: 500px;
-    height: 67px;
+    width: 50%;
+    height: 63px;
 }
 
 /* sign up input css */
 main#main-signUp-box input.sign-input {
     position: absolute;
-    width: 327px;
+    width: 67%;
     height: 47px;
     transform: translate(-50%, 0);
     left: 50%;
@@ -46,31 +46,66 @@ main#main-signUp-box input.sign-input~span {
     top: 76px;
 }
 
-main#main-signUp-box input.sign-input~span.pw-not-sign {
-    font-size: 11.3px;
-}
-
 /* sign up label css */
 main#main-signUp-box label.sign-label {
     position: absolute;
     transform: translate(0, -50%);
     font-size: 1.28em;
-    left: 18.7%;
+    left: 17%;
     top: 50%;
     z-index: 1;
 }
-/* placeholder 안 글씨 색 */
-main#main-signUp-box input.sign-input::placeholder {
-    color: #fff;
-}
-
 /* sign up input 안 text css */
 
 
-/* hover css */
+/* input and label hover css */
 main#main-signUp-box input.sign-input:hover~label.sign-label,
 main#main-signUp-box input.sign-input:focus~label.sign-label,
 main#main-signUp-box label.sign-label:hover,
 main#main-signUp-box label.sign-label:focus {
-    color: #f00;
+    font-size: .9em;
+    top: 28%;
+}
+
+/* terms css  */
+div.terms {
+    width: 327px;
+    font-size: 1.1em;
+    margin-top: 23px;
+}
+
+
+div.terms-box {
+    height: 120px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border-color: #000;
+}
+
+div.terms-box>label {
+    padding-left: 8px;
+}
+
+div.terms-box>label:nth-child(1) {
+    display: block;
+    margin-top: 5px;
+}
+
+div.sign-btn-box {
+    margin-top: 10px;
+    width: 34%;
+    height: 30px;
+}
+
+div.sign-btn-box>button {
+    width: 49%;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+div.sign-btn-box>button:hover {
+    background-color: #000;
+    color: #fff;
 }

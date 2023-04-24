@@ -10,53 +10,52 @@
     <!-- sub css 연결 -->
     <link rel="stylesheet" href="/css/map_shortening.css">
     <script src="/js/jquery-3.1.1.js"></script>
-    <!-- <script async src="/js/html_connection.js"></script> -->
+    <script async src="/js/html_connection.js"></script>
     <script async src="/js/sign.js"></script>
     
-    <title>Document</title>
+    <title>SIGN UP</title>
 </head>
 
 <body>
     <div id="wrapper">
         <main id="main-signUp-box" class="margn max-min">
-            <h1 class="text">회원가입</h1>
-            <form accept="#" method="post" class="sign-box margn">
+            <h1 class="signUP_Title text">회원가입</h1>
+            <form action="login.html"  method="post" class="sign-box margn" name="sign_up_frm">
                 <div class="sign-container">
                     <div class="id-box margn">
-                        <label class="sign-label id">id</label>
                         <input type="text" name="user_id" id="sign_user_id" class="sign-input center">
-                        <span class="notNull-sign box-none" id="sign_id_null">내용이 입력되지 않았습니다.</span>
+                        <label class="sign-label id">ID</label>
+                        <span class="notNull-sign box-none" id="sign_id_null">아이디가 입력되지 않았습니다.</span>
                     </div>
                     <div class="name-box margn">
-                        <label class="sign-label name">name</label>
                         <input type="text" name="user_name" id="sign_user_name" class="sign-input">
-                        <span class="notNull-sign box-none" id="sign_name_null">내용이 입력되지 않았습니다.</span>
+                        <label class="sign-label name">name</label>
+                        <span class="notNull-sign box-none" id="sign_name_null">이름이 입력되지 않았습니다.</span>
                     </div>
                     <div class="pw-box margn">
-                        <label class="sign-label pw">password</label>
-                        <input type="password" name="user_pw" id="sign_user_pw" class="sign-input"
-                            placeholder="8~30자리/영문 대소문자, 숫자, 특수문자 조합">
-                        <span class="notNull-sign pw-not-sign box-none" id="sign_pw_null"></span>
+                        <input type="password" name="user_pw" id="sign_user_pw" class="sign-input">
+                            <label class="sign-label pw">password</label>
+                            <span class="notNull-sign pw-not-sign box-none" id="sign_pw_null"></span>
                     </div>
                     <div class="mail-box margn">
+                        <input type="email" name="user_mail" id="sign_user_mail" class="sign-input">
                         <label class="sign-label mail">mail</label>
-                        <input type="email" name="user_mail" id="sign_user_mail" class="sign-input"  placeholder="ex) mail@mail.com">
-                        <span class="notNull-sign box-none" id="sign_mail_null">내용이 입력되지 않았습니다.</span>
+                        <span class="notNull-sign box-none" id="sign_mail_null">ex) mail@mail.com로 입력해주세요.</span>
                     </div>
                     <div class="phone-box margn">
+                        <input type="text" name="user_phone" id="sign_user_phone" class="sign-input">
                         <label class="sign-label phone">phone number</label>
-                        <input type="text" name="user_phone" id="sign_user_phone" class="sign-input" placeholder="'-' 빼고 숫자만 입력">
-                        <span class="notNull-sign box-none" id="sign_phone_null">내용이 입력되지 않았습니다.</span>
+                        <span class="notNull-sign box-none" id="sign_phone_null">'-' 포함해서 숫자만 입력해주세요.</span>
                     </div>
                 </div>
 
-                <div class="terms box-none">
-                    <label for="" class="sign-label">약관</label>
-                    <div class="terms-box margn">
+                <div class="terms margn">
+                    <h3 class="terms-title">약관</h3>
+                    <div class="terms-box margn border">
                         <label for="terms_all"><input type="checkbox" name="terms_all" id="terms_all"> 전체 동의</label>
                         <hr color="#cacaca">
                         <label for="service">
-                            <input type="checkbox" name="service" id="service" class="terms_checkbox"> (필수) 서비스 이용약관 동의 
+                            <input type="checkbox" name="service" id="service" class="terms_checkbox checkbox_checked_class"> (필수) 서비스 이용약관 동의 
                             <a href="/Terms_of_Use/service.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -64,7 +63,7 @@
                             </a>
                         </label><br>
                         <label for="privacy">
-                            <input type="checkbox" name="privacy" id="privacy" class="terms_checkbox"> (필수) 개인정보 수집 및 이용에 동의
+                            <input type="checkbox" name="privacy" id="privacy" class="terms_checkbox checkbox_checked_class"> (필수) 개인정보 수집 및 이용에 동의
                             <a href="/Terms_of_Use/privacy_policy.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -72,7 +71,7 @@
                             </a>
                         </label><br>
                         <label for="location_based">
-                            <input type="checkbox" name="location_based" id="location_based" class="terms_checkbox"> (필수) 위치 기반 서비스 이용약관 동의
+                            <input type="checkbox" name="location_based" id="location_based" class="terms_checkbox checkbox_checked_class"> (필수) 위치 기반 서비스 이용약관 동의
                                 <a href="/Terms_of_Use/location_based.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
@@ -89,13 +88,12 @@
                         </label>
                     </div>
                 </div>
-                <div class="sign-btn-box box-none">
-                    <input type="submit" value="SIGN UP"> 
-                    <input type="reset" value="RESET">
+                <div class="sign-btn-box margn">
+                    <button type="button" id="sign_up_submit">SIGN UP</button>
+                    <button type="reset" id="sign_up_reset">RESET</button>
                 </div>
             </form>
         </main>
-        <footer id="footer" class="footer-bottom"></footer>
 </body>
 
 </html>

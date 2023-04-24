@@ -1,3 +1,5 @@
+sign_up_subit = false
+
 /* sign up */
 $("input#sign_user_pw").on("click keyup", function () {
     // input or span list
@@ -6,6 +8,7 @@ $("input#sign_user_pw").on("click keyup", function () {
     var pwList = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "?"];
 
     if ($(list[0]).val() != "") {
+        $("label.sign-label.pw").css({ "top": "28%", "font-size": ".9em" });
         for (var i = 0; i <= pwList.length; i++) {
             if ($(list[0]).val().indexOf(pwList[i]) > 0 && $(list[0]).val().length > 7 && $(list[0]).val().length < 31) {
                 inputHideORShow("#00f", list[0], list[1]);
@@ -18,33 +21,36 @@ $("input#sign_user_pw").on("click keyup", function () {
             }
         }
     } else {
-        $(list[1]).text("내용이 입력되지 않았습니다.");
+        $(list[1]).text("8~30자리/영문 대소문자, 숫자, 특수문자 조합으로 입력해주세요.");
         inputHideORShow("#f00", list[0], list[1]);
     }
 });
 
 function inputHideORShow(color, inputID, SPAN) {
     $(inputID).css({ "border-bottom-color": color });
-    if(color == "#00f") {
+    if(color == "#00f") { 
+        sign_up_subit = true;
         $(SPAN).hide();
     } else {
         $(SPAN).show();
     }
+    return sign_up_subit;
 }
 
 let input = document.querySelectorAll("input.sign-input");
 let span = document.querySelectorAll("span.notNull-sign");
+let label = document.querySelectorAll("label.sign-label");
 
 input.forEach((e, index) => {
     e.addEventListener("click", (e) => {
-        inputALLHideORShow(input[index], span[index]);
+        inputALLHideORShow(input[index], span[index], label[index]);
     });
     e.addEventListener("keyup", (e) => {
-        inputALLHideORShow(input[index], span[index]);
+        inputALLHideORShow(input[index], span[index], label[index]);
     });
 });
 
-function inputALLHideORShow(inputID, inputSPAN) {
+function inputALLHideORShow(inputID, inputSPAN, inputLABEL) {
     var inputPW = document.getElementById("sign_user_pw");
 
     if (inputID != inputPW) {
@@ -52,6 +58,7 @@ function inputALLHideORShow(inputID, inputSPAN) {
             $(inputID).css({ "border-bottom-color": "#f00" });
             $(inputSPAN).show();
         } else {
+            $(inputLABEL).css({ "top": "28%", "font-size": ".9em" });
             $(inputID).css({ "border-bottom-color": "#00f" });
             $(inputSPAN).hide();
         }
@@ -59,7 +66,7 @@ function inputALLHideORShow(inputID, inputSPAN) {
 }
 
 /* 약관 */
-var terms_checkbox = ["#terms_all", "#terms_all:checked", "div.terms-box>label>input.terms_checkbox", "div.terms-box>label>input.terms_checkbox:checked"];
+var terms_checkbox = ["#terms_all", "#terms_all:checked", "div.terms-box>label>input.terms_checkbox", "div.terms-box>label>input.terms_checkbox:checked", "input.checkbox_checked_class", "input.checkbox_checked_class:checked"];
 
 // 전체 선택 checkbox 클릭 시
 $(terms_checkbox[0]).click(function () {
@@ -77,4 +84,15 @@ $(terms_checkbox[2]).click(function () {
     } else {
         $(terms_checkbox[0]).prop('checked', false);
     }
+});
+
+/* sign up btton */
+$("button#sign_up_submit").click(function() {
+    console.error("SIGN UP : " + sign_up_subit);
+    for(var i=0; i<input.length; i++) {
+        if($(terms_checkbox[4]).length == $(terms_checkbox[5]).length && input[i] != "" && sign_up_subit) {    
+            document.sign_up_frm.submit();
+        }
+    }
+
 });
