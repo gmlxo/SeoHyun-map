@@ -1,10 +1,7 @@
 /* main css */
-#wrapper {
-    margin: 0;
-    padding: 0;
-}
-
 main#main-sign-box {
+    padding-bottom: 30px;
+    padding-top: 10px;
     color: #000;
 }
 main#main-sign-box_in.sign_in {
@@ -44,11 +41,12 @@ main#main-sign-box_in input.sign-input {
     font-size: 1.1em;
 }
 
-main#main-sign-box input.sign-input~span {
+main#main-sign-box input.sign-input~span,
+main#main-sign-box_in input.sign-input~span {
     position: absolute;
     font-size: .87em;
     color: #f00;
-    left: 18%;
+    left: 17.4%;
     top: 76px;
 }
 
@@ -99,8 +97,13 @@ div.terms-box_sign>label:nth-child(1) {
     margin-top: 5px;
 }
 
+div.terms-box_sign>label>input[type="checkbox"] {
+    accent-color: #000;
+}
+
+/* button css */
 div.sign-btn-box {
-    margin-top: 10px;
+    margin-top: 21px;
     width: 34%;
     height: 30px;
 }
