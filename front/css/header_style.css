@@ -27,7 +27,7 @@ ul.header-menu {
     transform: translate(-50%, -100%);
     left: 50%;
     height: 45px;
-    min-width: 500px;
+    min-width: 503px;
 }
 
 ul.header-menu>li {
@@ -98,7 +98,10 @@ svg.proFileSvg {
 div.search>input.sign-search:hover {
     width: 190px;
     color: #000 !important;
-    border: 2px solid #0000ff;
+}
+
+div.search>input.sign-search:focus {
+    border: 1px solid #888;
 }
 
 div.profile-menu {
