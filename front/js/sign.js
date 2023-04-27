@@ -54,10 +54,10 @@ input_up.forEach((e, index) => {
 // 로그인 안 input 을 클릭 or 입력시
 input_in.forEach((e, index) => {
     e.addEventListener("click", (e) => {
-        inputALLHideORShow(input_in[index], null, label_in[index]);
+        inputALLHideORShow(input_in[index], span_in[index], label_in[index]);
     });
     e.addEventListener("keyup", (e) => {
-        inputALLHideORShow(input_in[index], null, label_in[index]);
+        inputALLHideORShow(input_in[index], span_in[index], label_in[index]);
     });
 });
 
@@ -66,20 +66,13 @@ function inputALLHideORShow(inputID, inputSPAN, inputLABEL) {
     var inputPW = document.getElementById("sign_user_pw");
 
     if (inputID != inputPW) { //
-        if (inputID.value == "") { // input 값이 업다면
+        if (inputID.value == "") { // input 값이 없다면
             $(inputID).css({ "border-bottom-color": "#f00" });
             $(inputSPAN).show();
         } else {
             $(inputLABEL).css({ "top": "28%", "font-size": ".9em" });
             $(inputID).css({ "border-bottom-color": "#00f" });
             $(inputSPAN).hide();
-        }
-    } else if(inputSPAN == null) {
-        if(inputID.value != "") {
-            $(inputLABEL).css({ "top": "28%", "font-size": ".9em" });
-            $(inputID).css({ "border-bottom-color": "#00f" });
-        } else {
-            $(inputID).css({ "border-bottom-color": "#f00" });
         }
     }
 }

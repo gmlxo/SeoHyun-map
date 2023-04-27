@@ -17,8 +17,9 @@
 
 .reserve-store .medal {
   width: 334px;
-  height: 334px;
+  height: 367px;
   perspective: 600px;
+  border-radius: 50% 50% 50px 50px;
 }
 
 .reserve-store .medal .front,
