@@ -37,7 +37,7 @@ $("main#main-sign-box input#sign_user_pw").on("click keyup", function () {
             }
         }
     } else { // 입력을 안했다면
-        $(list[1]).text("8~30자리/영문 대소문자, 숫자, 특수문자 조합으로 입력해주세요.");
+        $(list[1]).text("8~30자리/영문, 숫자, 특수문자 조합으로 입력해주세요.");
         inputHideORShow("#f00", list[0], list[1]);
     }
 });
@@ -107,7 +107,7 @@ function allShow(input, span) {
         if (input[i].value == "") {
             $(input[i]).css({ "border-bottom-color": "#f00" });
             if (input[i] == inputPW && span != null) {
-                $(span[i]).text("8~30자리/영문 대소문자, 숫자, 특수문자 조합으로 입력해주세요.");
+                $(span[i]).text("8~30자리/영문, 숫자, 특수문자 조합으로 입력해주세요.");
                 inputHideORShow("#f00", input[i], span[i]);
             }
             $(span[i]).show();
