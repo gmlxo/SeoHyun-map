@@ -17,7 +17,8 @@ var terms_checkbox = ["#terms_all", "#terms_all:checked", "div.terms-box_sign>la
 /* sign up */
 $("main#main-sign-box input#sign_user_pw").on("click keyup", function () {
     // input or span list
-    var list = ["input#sign_user_pw", "span#sign_pw_null"];
+    // var list = ["input#sign_user_pw", "span#sign_pw_null"];
+    var list = [$("input#sign_user_pw"), $("span#sign_pw_null")];
     // password 가능 특수문자
     var pwList = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "?"];
 
@@ -29,7 +30,7 @@ $("main#main-sign-box input#sign_user_pw").on("click keyup", function () {
                 inputHideORShow("#00f", list[0], list[1]);
                 break;
             } else if ($(list[0]).val().length < 8 || $(list[0]).val().length > 30) { // 글자 수 8미만 30초과라면
-                $(list[1]).text("8자 이상 30자 이하로 적어주세요");
+                $(list[1]).text("8자 이상 30자 이하로 적어주세요.");
             } else {
                 $(list[1]).text("보안에 취약합니다.");
                 inputHideORShow("#f00", list[0], list[1]);
@@ -62,24 +63,33 @@ input_in.forEach((e, index) => {
 });
 
 // 비밀번호 제외 input, span css 제어
-function inputALLHideORShow(inputID, inputSPAN, inputLABEL) {
-    var inputPW = document.getElementById("sign_user_pw");
+function inputALLHideORShow(INPUT, SPAN, LABEL) {
+    var sign_boolean = true;
+    var pw = document.getElementById("sign_user_pw");
+    var mail = document.getElementById("sign_user_mail");
+    var phone = document.getElementById("sign_user_phone");
 
-    if (inputID != inputPW) { //
-        if (inputID.value == "") { // input 값이 없다면
-            $(inputID).css({ "border-bottom-color": "#f00" });
-            $(inputSPAN).show();
+    if (pw != INPUT) { // pw 제외
+        switch (INPUT) {
+            case mail: if ($(mail).val().indexOf("@") < 0 || $(mail).val().indexOf(".") < 0) sign_boolean = false; break;
+            case phone: if ($("input#sign_user_phone").val().split('-').length - 1 != 2) sign_boolean = false; break;
+            default: break;
+        }
+        if (INPUT.value == "" || !sign_boolean) { // input 값이 없다면
+            $(INPUT).css({ "border-bottom-color": "#f00" });
+            $(SPAN).show();
         } else {
-            $(inputLABEL).css({ "top": "28%", "font-size": ".9em" });
-            $(inputID).css({ "border-bottom-color": "#00f" });
-            $(inputSPAN).hide();
+            $(LABEL).css({ "top": "28%", "font-size": ".9em" });
+            $(INPUT).css({ "border-bottom-color": "#00f" });
+            $(SPAN).hide();
         }
     }
+    return sign_boolean;
 }
 
-// 비밀번호 input, span css 제어
-function inputHideORShow(color, inputID, SPAN) {
-    $(inputID).css({ "border-bottom-color": color });
+// 비밀번호 input, span css
+function inputHideORShow(color, INPUT, SPAN) {
+    $(INPUT).css({ "border-bottom-color": color });
     if (color == "#00f") {
         sign_up_submit = true;
         $(SPAN).hide();
@@ -94,9 +104,9 @@ function allShow(input, span) {
     var inputPW = document.getElementById("sign_user_pw");
 
     for (var i = 0; i < input.length; i++) {
-        if(input[i].value == "") {
+        if (input[i].value == "") {
             $(input[i]).css({ "border-bottom-color": "#f00" });
-            if(input[i] == inputPW && span != null) {
+            if (input[i] == inputPW && span != null) {
                 $(span[i]).text("8~30자리/영문 대소문자, 숫자, 특수문자 조합으로 입력해주세요.");
                 inputHideORShow("#f00", input[i], span[i]);
             }

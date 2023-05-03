@@ -80,6 +80,10 @@ div.terms {
     margin-top: 23px;
 }
 
+div.terms>div.terms-box_sign {
+    min-width: 323px;
+}
+
 
 div.terms-box_sign {
     height: 120px;
@@ -105,7 +109,7 @@ div.terms-box_sign>label>input[type="checkbox"] {
 #cite_btn {
     position: absolute;
     left: 63%;
-    width: 100px;
+    width: 21%;
     height: 42px;
 }
 div.sign-btn-box {
@@ -123,7 +127,7 @@ main#main-sign-box_in>form.sign-box button {
 
 div.sign-btn-box>button  {
     width: 49%;
-    height: 30px;
+    height: 37px;
 }
 
 div.sign-btn-box>button#sign_in_submit {
