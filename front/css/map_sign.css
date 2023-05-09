@@ -4,49 +4,40 @@ main#main-sign-box {
     padding-top: 10px;
     color: #000;
 }
-main#main-sign-box_in.sign_in {
-    margin-top: 70px;
-}
-
-/* sign page h1 */
-main#main-sign-box h1.sign_Title {
-    margin-top: 20px;
-}
-
-/* form css */
-form.sign-box {
-    margin-top: 15px;
-}
+main#main-sign-box_in.sign_in { margin-top: 70px; }
+main#main-sign-box h1.sign_Title { margin-top: 20px; } /* sign page h1 */
+form.sign-box { margin-top: 15px; } /* form css */
 
 /* container 안 모든 div css */
 main#main-sign-box div.sign-container>div,
 main#main-sign-box_in div.sign-container>div {
     position: relative;
     padding-top: 20px;
-    width: 50%;
+    width: 34.2%;
     height: 63px;
 }
 
 /* sign input css */
 main#main-sign-box input.sign-input,
 main#main-sign-box_in input.sign-input {
-    position: absolute;
     width: 67%;
     height: 47px;
-    transform: translate(-50%, 0);
-    left: 50%;
     border: none;
     outline: none;
+    margin-left: 20px;
     border-bottom: 2px solid #000;
     font-size: 1.1em;
 }
+
+main#main-sign-box input.sign-input.input-width { width: 95%; }
+main#main-sign-box_in input.sign-input { position: absolute; }
 
 main#main-sign-box input.sign-input~span,
 main#main-sign-box_in input.sign-input~span {
     position: absolute;
     font-size: .87em;
     color: #f00;
-    left: 17.4%;
+    left: 5.8%;
     top: 76px;
 }
 
@@ -56,10 +47,13 @@ main#main-sign-box_in label.sign-label {
     position: absolute;
     transform: translate(0, -50%);
     font-size: 1.28em;
-    left: 17%;
+    left: 6.3%;
     top: 50%;
     z-index: 1;
 }
+
+main#main-sign-box_in input.sign-input~span,
+main#main-sign-box_in label.sign-label { left: 23%;}
 
 /* input and label hover css */
 main#main-sign-box input.sign-input:hover~label.sign-label,
@@ -101,17 +95,15 @@ div.terms-box_sign>label:nth-child(1) {
     margin-top: 5px;
 }
 
-div.terms-box_sign>label>input[type="checkbox"] {
-    accent-color: #000;
-}
+div.terms-box_sign>label>input[type="checkbox"] { accent-color: #000; }
 
 /* button css */
 #cite_btn {
-    position: absolute;
-    left: 63%;
-    width: 21%;
+    margin-right: 10px;
+    width: 23%;
     height: 42px;
 }
+
 div.sign-btn-box {
     margin-top: 21px;
     width: 34%;
@@ -129,7 +121,9 @@ div.sign-btn-box>button  {
     width: 49%;
     height: 37px;
 }
-
+/* main.sign_in div.sign-btn-box>button {
+    width: 60%;
+} */
 div.sign-btn-box>button#sign_in_submit {
     justify-content: center;
     display: block;

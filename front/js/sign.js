@@ -1,11 +1,12 @@
 sign_up_submit = false; // 회원가입 넘어가기
+sign_in_submit_num = 0; // 로그인 실패 횟수
 
 // sign up : input, span, label
 let input_up = document.querySelectorAll("main#main-sign-box input.sign-input");
 let span_up = document.querySelectorAll("main#main-sign-box span.notNull-sign");
 let label_up = document.querySelectorAll("main#main-sign-box label.sign-label");
 
-// sign in : input, label
+// sign in : input, label 
 let input_in = document.querySelectorAll("main#main-sign-box_in input.sign-input");
 let span_in = document.querySelectorAll("main#main-sign-box_in span.notNull-sign");
 let label_in = document.querySelectorAll("main#main-sign-box_in label.sign-label");
@@ -17,15 +18,14 @@ var terms_checkbox = ["#terms_all", "#terms_all:checked", "div.terms-box_sign>la
 /* sign up */
 $("main#main-sign-box input#sign_user_pw").on("click keyup", function () {
     // input or span list
-    // var list = ["input#sign_user_pw", "span#sign_pw_null"];
-    var list = [$("input#sign_user_pw"), $("span#sign_pw_null")];
+    var list = ["input#sign_user_pw", "span#sign_pw_null"];
+    // var list = [$("input#sign_user_pw"), $("span#sign_pw_null")];
     // password 가능 특수문자
     var pwList = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "?"];
 
     if ($(list[0]).val() != "") { // 입력을 했다면
         $("label.sign-label.pw").css({ "top": "28%", "font-size": ".9em" }); // label css 
         for (var i = 0; i <= pwList.length; i++) {
-            // 입력값에 특문이 있으며 글자 수가 8이상 30이하인가
             if ($(list[0]).val().indexOf(pwList[i]) > 0 && $(list[0]).val().length > 7 && $(list[0]).val().length < 31) {
                 inputHideORShow("#00f", list[0], list[1]);
                 break;
@@ -65,20 +65,20 @@ input_in.forEach((e, index) => {
 // 비밀번호 제외 input, span css 제어
 function inputALLHideORShow(INPUT, SPAN, LABEL) {
     var sign_boolean = true;
-    var pw = document.getElementById("sign_user_pw");
-    var mail = document.getElementById("sign_user_mail");
-    var phone = document.getElementById("sign_user_phone");
+    var notINTPUT = [document.getElementById("sign_user_pw"), document.getElementById("sign_user_mail"), document.getElementById("sign_user_phone"), document.getElementById("sign_user_pw_reconfirm")];
 
-    if (pw != INPUT) { // pw 제외
+    if (notINTPUT[0] != INPUT) { // pw 제외
         switch (INPUT) {
-            case mail: if ($(mail).val().indexOf("@") < 0 || $(mail).val().indexOf(".") < 0) sign_boolean = false; break;
-            case phone: if ($("input#sign_user_phone").val().split('-').length - 1 != 2) sign_boolean = false; break;
-            default: break;
+            case notINTPUT[1]: if ($(notINTPUT[1]).val().indexOf("@") < 0 || $(notINTPUT[1]).val().indexOf(".") < 0) sign_boolean = false; break;
+            case notINTPUT[2]: if ($(notINTPUT[2]).val().split('-').length - 1 != 2) sign_boolean = false; break;
+            case notINTPUT[3]: if ($(notINTPUT[3]).val() != $(notINTPUT[0]).val()) sign_boolean = false; break;
+            default: sign_boolean = true; break;
         }
+
         if (INPUT.value == "" || !sign_boolean) { // input 값이 없다면
             $(INPUT).css({ "border-bottom-color": "#f00" });
             $(SPAN).show();
-        } else {
+        } else if (INPUT.value != "") {
             $(LABEL).css({ "top": "28%", "font-size": ".9em" });
             $(INPUT).css({ "border-bottom-color": "#00f" });
             $(SPAN).hide();
@@ -92,6 +92,7 @@ function inputHideORShow(color, INPUT, SPAN) {
     $(INPUT).css({ "border-bottom-color": color });
     if (color == "#00f") {
         sign_up_submit = true;
+        $("#pw-reconfirm").show();
         $(SPAN).hide();
     } else {
         $(SPAN).show();
@@ -153,7 +154,7 @@ $("button#sign_up_submit").click(function () {
 });
 
 // sign in button
-$("button#sign_in_submit").click(function () {
+$("button#sign_in_submit").click(function sign_in_submit_btn() {
     sign_in_submit = true;
     for (var i = 0; i < input_in.length; i++) {
         if (input_in[i].value == "") {
@@ -163,8 +164,14 @@ $("button#sign_in_submit").click(function () {
     }
     if (sign_in_submit) {
         document.sign_in_frm.submit();
+        return sign_up_submit_num;
+    } else if (sign_in_submit_num > 6) {
+        sign_in_submit = false;
+        alert("너무 틀렸다 고만해라");
     } else {
         allShow(input_in, span_in);
+        sign_in_submit_num++;
     }
     console.error("SIGN IN : " + sign_in_submit);
+    console.log(sign_in_submit_num);
 });

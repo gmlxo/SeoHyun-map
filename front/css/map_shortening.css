@@ -1,65 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: #000;
-
-}
-
-/* 최대 최소 크기 지정 */
-.max-min {
-    max-width: 1350px;
-    min-width: 420px;
-}
-
-/* 가운데 보내기 */
-.margn {
-    margin: 0 auto;
-}
-
-/* 가운데 보내기 */
-.center {
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-/* 한줄로 만들기 */
-.flex {
-    display: flex;
-}
-
-/* 왼쪽으로 보내기 */
-.left {
-    float: left;
-}
-
-/* 오른쪽으로 보내기 */
-.right {
-    float: right;
-}
-
-/* 크기 넘어가면 감춤 */
-.overflow {
-    overflow: hidden;
-}
-
-/* 글자 가운데 */
-.text {
-    text-align: center;
-}
-
-/* footer */
-footer#footer.footer-bottom {
-    /* 하단 고정 */
-    bottom: 0;
-    position: absolute;
-}
-
-.box-none {
-    display: none;
-}
-
-.border {
-    border: 1px solid;
-}
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; color: #000; } /* 기본설정 */
+.max-min { max-width: 1350px; min-width: 420px; } /* 최대 최소 크기 지정 */
+.margn, main { margin: 0 auto; } /* 가운데 보내기 */
+.flex { display: flex; } /* 한줄로 만들기 */
+.left { float: left; } /* 왼쪽으로 보내기 */
+.right { float: right; } /* 오른쪽으로 보내기 */
+.overflow { overflow: hidden; } /* 크기 넘어가면 감춤 */
+.text { text-align: center; } /* 글자 가운데 */
+.box-none { display: none; } /* 숨기기 */
+.border { border: 1px solid; } /* 선 긋기 */
+footer#footer.footer-bottom { bottom: 0; position: absolute; } /* footer _ 하단 고정 */
+.center { left: 50%; transform: translate(-50%, 0); } /* 가운데 보내기 */
