@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- SQL Query - "; = X" -->
+<mapper namespace="notice">
+	<select id="불러올때 이름" parameterType="받아갈 타입"
+		resultType="얘가 머였지..?">
+		SELECT * FROM tableName
+	</select>
+</mapper>

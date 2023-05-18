@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- 스캔한 패지키 내부의 클래스 중 Controller 어노테이션을 가지고 있는 클래스들을 Controller로 로딩하도록 한다 -->
 	<annotation-driven/>
@@ -22,8 +24,17 @@
 	<!-- 스캔할 bean들이 모여있는 패키지를 지정한다. -->
 	<context:component-scan base-package="com.seohyun" /> <!-- main -->
 	<context:component-scan base-package="com.seohyun.web" /> <!-- web -->
+	<context:component-scan base-package="com.seohyun.service" /> <!-- service -->
 	<context:component-scan base-package="com.seohyun.controller" /> <!-- controller -->
 	<context:component-scan base-package="com.seohyun.dao" /> <!-- dao -->
+	<context:component-scan base-package="com.seohyun.vo" /> <!-- vo -->
 	
-	
+	<mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <beans:bean id="loggerInterceptor" class="com.seohyun.logger.LoggerInterceptor"></beans:bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    
+    <beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
 </beans:beans>
