@@ -4,7 +4,7 @@ div#wrapper {
 }
 
 /* header */
-header {
+#header {
     position: relative;
     width: 100%;
     border-bottom: 1px solid #888;
@@ -31,7 +31,6 @@ ul.header-menu {
 }
 
 ul.header-menu>li {
-    /* width: 25%; */
     padding: 5px 30px 5px 30px;
     float: left;
     text-align: center;
@@ -80,7 +79,7 @@ svg.searchSvg {
     transition: width .4s;
 }
 
-/* search placeholder 가리기*/
+/* search placeholder 가리기 */
 div.search>input.sign-search::placeholder {
     /* 글씨 색 없애 주는? */
     color: transparent;
@@ -94,10 +93,13 @@ svg.proFileSvg {
 }
 
 /* search input 동작 */
-/* .search>.sign-search:focus, */
 div.search>input.sign-search:hover {
     width: 190px;
     color: #000 !important;
+}
+
+div.search>input.sign-search:hover ::placeholder {
+    color: #888;
 }
 
 div.search>input.sign-search:focus {
@@ -132,12 +134,14 @@ div.profile-menu>ul>li>a:hover {
 }
 
 @media (min-width: 930px) {
-    header {
+    #header {
         display: flex;
     }
+
     div.header-box {
         height: 100px;
     }
+
     ul.header-menu {
         transform: translate(-50%, -106%);
     }
@@ -147,6 +151,7 @@ div.profile-menu>ul>li>a:hover {
     div.header-box {
         height: 150px;
     }
+
     ul.header-menu {
         transform: translate(-50%, 5%);
     }

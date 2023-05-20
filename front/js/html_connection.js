@@ -1,6 +1,3 @@
-document.addEventListener('load', headerAndFooter());
-
-function headerAndFooter() {
-    $("header#header").load("/html/header.html");
-    $("footer#footer").load("/html/footer.html");
+window.onload = function () { // header footer 연결
+    $("header#header").load("/html/header.html"); $("footer#footer").load("/html/footer.html");
 }

@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/map_shortening.css">
-    <script src="/js/jquery-3.1.1.js"></script>
-    <script async src="/js/html_connection.js"></script>
+    <link rel="stylesheet" href="/css/map_shortening.css"> <!-- 공통 css -->
+    <link rel="stylesheet" href="/css/profile.css"> <!-- profile edit css -->
+    <script src="/js/jquery-3.1.1.js"></script> <!-- jQuery 연결 -->
+    <script async src="/js/profile.js"></script> <!-- profile edit js  -->
+    <script async src="/js/html_connection.js"></script> <!-- header footer 연결 js -->
     <title>PROFILE</title>
 </head>
+
 <body>
     <header id="header"></header>
-    <main id="main-profile-box max-min">
-        <div class="profile-box">
-            <form action="#" method="post">
-                <table>
-                    <tr>
-                        <td>user id</td>
-                        <td><input type="text" name="user_id" id="update_user_id" class="date_input"></td>
-                    </tr>
-                    <tr>
-                        <td>user id</td>
-                        <td><input type="text" name="user_id" id="update_user_id" class="date_input"></td>
-                    </tr>
-                    <tr>
-                        <td>user id</td>
-                        <td><input type="text" name="user_id" id="update_user_id" class="date_input"></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
+    <main id="main_profile_box" class="margin max-min">
+        <header class="margn">
+            <img src="/img/basic-profile.png" alt="user file" id="profile_img" class="left border" width="unset" height="120">
+            <div>
+                <div class="user_box right">
+                    <span id="user_id"><b>user id</b></span><br>
+                    <span id="user_name">user name</span>
+                </div>
+                <a href="/html/profile_edit.html" class="right text hover-color-black">편집</a>
+            </div>
+        </header>
+        <br>
+        <table border="1" class="margn">
+            <tr>
+                <th></th>
+                <th>가계 이름</th>
+                <th>계시 일</th>
+                <th>수정</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>TEST NAME</td>
+                <td>0000-00-00</td>
+                <td><a href="#">수정</a></td>
+            </tr>
+        </table>
     </main>
     <footer id="footer"></footer>
 </body>
+
 </html>

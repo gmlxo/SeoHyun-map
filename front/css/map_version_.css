@@ -1,15 +1,21 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
 #map {
     width: 100%;
     height: 700px;
 }
+
+.map_menu {
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    border-color: #000;
+    width: 30px;
+    height: 30px;
+    top: 90%;
+    left: 93%;
+    /* opacity: .5; */
+}
+
+/* .map_menu>svg.bi-three-dots-vertical{ color: #000; font-weight: bold; background-color: rgba(255,255,255,.5);} */
 
 /* version 2 css */
 .map-wrap {

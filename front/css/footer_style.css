@@ -1,4 +1,4 @@
-footer {
+#footer {
     width: 100%;
     background-color: #000;
     color: #cacacc;
@@ -20,9 +20,9 @@ a.icon-link>svg.bi {
     height: 30px;
 }
 
-footer span,
-footer a,
-footer path {
+#footer span,
+#footer a,
+#footer path {
     font-size: 15px;
     color: #666;
 }
@@ -52,7 +52,7 @@ div.ff-address a {
     color: #888;
 }
 
-footer a:hover,
+#footer a:hover,
 a.fh-maker:hover span,
 div.Icons-box>a:hover path {
     color: #fff;
@@ -64,7 +64,7 @@ div.Icons-box {
 
 /* width 1200px 이상시 */
 @media (min-width: 1070px) {
-    footer {
+    #footer {
         height: 200px;
     }
 
@@ -84,7 +84,7 @@ div.Icons-box {
 
 /* width 601px 이상시 */
 @media (max-width: 1069px) and (min-width: 601px) {
-    footer {
+    #footer {
         height: 230px;
     }
 
@@ -99,7 +99,7 @@ div.Icons-box {
 
 /* width 601px 이상시 */
 @media (max-width: 600px) {
-    footer {
+    #footer {
         height: 330px;
     }
 

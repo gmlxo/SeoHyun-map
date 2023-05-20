@@ -1,0 +1,17 @@
+main#main_profile_box { height: 500px; padding: 10px;}
+#main_profile_box>header { width: 223px; height: 120px; }
+#main_profile_box>header .right { padding-right: 5px; margin-top: 22px; }
+#main_profile_box>header>div>a {
+    display: block;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 60px;
+    height: 26px;
+    border-radius: 10px;
+    line-height: 26px;
+}
+span#user_id { font-size: 1.2em; }
+span#user_name { font-size: .68em; margin-top: -4px; display: block; }
+
+img#profile_img,
+#img_upload { border-radius: 50%; }

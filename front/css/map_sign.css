@@ -129,9 +129,3 @@ div.sign-btn-box>button#sign_in_submit {
     display: block;
     height: 40px;
 }
-
-main#main-sign-box>form.sign-box button:hover,
-main#main-sign-box_in>form.sign-box button:hover {
-    background-color: #000;
-    color: #fff;
-}
