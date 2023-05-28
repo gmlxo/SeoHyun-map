@@ -1,3 +1,5 @@
+id_cite = false; // 아이디 중복 확인
+mail_cite = false; // 메일 인증
 sign_up_submit = false; // 회원가입 넘어가기
 sign_in_submit_num = 0; // 로그인 실패 횟수
 
@@ -119,6 +121,9 @@ function allShow(input, span) {
 /* terms */
 // 전체 선택 checkbox 클릭 시
 $(terms_checkbox[0]).click(function () {
+    $("div.terms>h3.terms-title").css({ "color": "#000" });
+    $("div.terms>div.terms-box_sign label").css({ "color": "#000" });
+
     if ($(terms_checkbox[0]).is(":checked")) {
         $(terms_checkbox[2]).prop('checked', true);
     } else {
@@ -128,6 +133,9 @@ $(terms_checkbox[0]).click(function () {
 
 // checkbox 전부 클릭 시
 $(terms_checkbox[2]).click(function () {
+    $("div.terms>h3.terms-title").css({ "color": "#000" });
+    $("div.terms>div.terms-box_sign label").css({ "color": "#000" });
+
     if ($(terms_checkbox[3]).length > 3) {
         $(terms_checkbox[0]).prop('checked', true);
     } else {
@@ -136,25 +144,46 @@ $(terms_checkbox[2]).click(function () {
 });
 
 /* button */
+// cite button
+function cite(ID) {
+    console.error("나머진 백엔드가");
+    $(ID).css({
+        "background-color": "#fff", "color": "#fff", "border": "1px solid #000", "color": "#000"
+    });
+}
+
 // sign up button
 $("button#sign_up_submit").click(function () {
     for (var i = 0; i < input_up.length; i++) {
         if (input_up[i].value == "" || !sign_up_submit) {
             sign_up_submit = false;
+            enterkey(100);
             break;
         }
     }
-    if ($(terms_checkbox[4]).length == $(terms_checkbox[5]).length && sign_up_submit) {
+    if ($(terms_checkbox[4]).length == $(terms_checkbox[5]).length && sign_up_submit && mail_cite && id_cite) {
         document.sign_up_frm.submit();
     } else {
         allShow(input_up, span_up);
+        if ($(terms_checkbox[4]).length != $(terms_checkbox[5]).length) {
+            $("div.terms>h3.terms-title").css({ "color": "#f44" });
+            $("div.terms>div.terms-box_sign label").css({ "color": "#f77" });
+        }
+        if (!id_cite) {
+            $("button#id_cite_btn").css({ "background-color": "#f77", "color": "#fff", "border": "none" });
+            alert("아이디 중복 확인 좀..");
+        }
+        if (!mail_cite) {
+            $("button#mail_cite_btn").css({ "background-color": "#f77", "color": "#fff", "border": "none" });
+            alert("메일 인증 좀..");
+        }
     }
     console.error("SIGN UP : " + sign_up_submit);
     return sign_up_submit;
 });
 
 // sign in button
-$("button#sign_in_submit").click(function sign_in_submit_btn() {
+$("button#sign_in_submit").click(function () {
     sign_in_submit = true;
     for (var i = 0; i < input_in.length; i++) {
         if (input_in[i].value == "") {
@@ -170,8 +199,48 @@ $("button#sign_in_submit").click(function sign_in_submit_btn() {
         alert("너무 틀렸다 고만해라");
     } else {
         allShow(input_in, span_in);
+        enterkey_in(100);
         sign_in_submit_num++;
     }
     console.error("SIGN IN : " + sign_in_submit);
     console.log(sign_in_submit_num);
 });
+
+/* key borde*/
+// sign up keyboard
+function enterkey_up(num) {
+    if (window.event.keyCode == 13) {
+        if (num == 100) {
+            for (var i = 0; i < input_up.length; i++) {
+                if ($(input_up[i]).val() == "" || $(input_up[i]).val() == null) {
+                    $(input_up[i]).focus();
+                    break;
+                } else if (i == input_up.length - 1) {
+                    $("#sign_up_submit").click();
+                }
+            }
+        } else {
+            num = (!sign_up_submit && num == 2) ? num += 1 : num;
+            num = (num < input_up.length - 1) ? num += 1 : num = 0;
+            $(input_up[num]).focus();
+        }
+    }
+}
+// sign in keyboard
+function enterkey_in(num) {
+    if (window.event.keyCode == 13) {
+        if (num == 100) {
+            for (var i = 0; i < input_in.length; i++) {
+                if ($(input_in[i]).val() == "" || $(input_in[i]).val() == null) {
+                    $(input_in[i]).focus();
+                    break;
+                } else if (i == input_in.length - 1) {
+                    $("#sign_in_submit").click();
+                }
+            }
+        } else {
+            num = (num < input_in.length - 1) ? num += 1 : num = 0;
+            $(input_in[num]).focus();
+        }
+    }
+}

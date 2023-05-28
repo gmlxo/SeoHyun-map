@@ -6,6 +6,10 @@
 <mapper namespace="notice">
 	<select id="불러올때 이름" parameterType="받아갈 타입"
 		resultType="얘가 머였지..?">
-		SELECT * FROM tableName
+		SELECT
+		 		* 
+		 FROM tableName
+		 <!-- WHERE 대신 -->
+		<if test="조건"></if>
 	</select>
 </mapper>

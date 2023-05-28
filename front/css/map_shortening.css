@@ -10,4 +10,5 @@
 .border { border: 1px solid; } /* 선 긋기 */
 footer#footer.footer-bottom { bottom: 0; position: absolute; } /* footer _ 하단 고정 */
 .center { left: 50%; transform: translate(-50%, 0); } /* 가운데 보내기 */
-button:hover, .hover-color-black:hover { background-color: #000 !important; color: #fff !important; }
+button:hover, /* hover */
+.hover-color-black:hover { background-color: #000 !important; color: #fff !important; }

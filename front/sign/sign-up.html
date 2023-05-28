@@ -21,37 +21,37 @@
         <form action="#" method="post" class="sign-box margn" name="sign_up_frm">
             <div class="sign-container">
                 <div class="id-box margn">
-                    <input type="text" name="user_id" id="sign_user_id" class="sign-input">
+                    <input type="text" name="user_id" id="sign_user_id" class="sign-input" onkeydown="javascript:enterkey_up(0)">
                     <label class="sign-label id">ID</label>
                     <span class="notNull-sign box-none" id="sign_id_null">아이디가 입력되지 않았습니다.</span>
-                    <button type="button" id="cite_btn" class="right" onclick="javascript:console.error('싫어!! 기다려')">중복확인</button>
+                    <button type="button" id="id_cite_btn" class="right" onclick="javascript:id_cite = true; cite('#id_cite_btn')">중복확인</button>
                 </div>
                 <div class="name-box margn">
-                    <input type="text" name="user_name" id="sign_user_name" class="sign-input input-width">
+                    <input type="text" name="user_name" id="sign_user_name" class="sign-input input-width" onkeydown="javascript:enterkey_up(1)">
                     <label class="sign-label name">name</label>
                     <span class="notNull-sign box-none" id="sign_name_null">이름이 입력되지 않았습니다.</span>
                 </div>
                 <div class="pw-box margn">
-                    <input type="password" name="user_pw" id="sign_user_pw" class="sign-input input-width">
+                    <input type="password" name="user_pw" id="sign_user_pw" class="sign-input input-width" onkeydown="javascript:enterkey_up(2)">
                     <label class="sign-label pw">password</label>
                     <span class="notNull-sign pw-not-sign box-none" id="sign_pw_null"></span>
                 </div>
 
                 <div class="pw-box margn box-none" id="pw-reconfirm">
-                    <input type="password" name="user_pw_reconfirm" id="sign_user_pw_reconfirm" class="sign-input input-width">
+                    <input type="password" name="user_pw_reconfirm" id="sign_user_pw_reconfirm" class="sign-input input-width" onkeydown="javascript:enterkey_up(3)">
                     <label id="pw-reconfirm_label" class="sign-label pw-reconfirm">reconfirm password</label>
                     <span class="notNull-sign pw-not-sign_reconfirm box-none" id="sign_pw_null_reconfirm">비밀번호와 일치하지
                         않습니다.</span>
                 </div>
 
                 <div class="mail-box margn">
-                    <input type="email" name="user_mail" id="sign_user_mail" class="sign-input">
+                    <input type="email" name="user_mail" id="sign_user_mail" class="sign-input" onkeydown="javascript:enterkey_up(4)">
                     <label class="sign-label mail">mail</label>
                     <span class="notNull-sign box-none" id="sign_mail_null">ex) email@email.com로 입력해주세요.</span>
-                    <button type="button" id="cite_btn" class="right" onclick="javascript:console.error('싫어!! 기다려')">인증하기</button>
+                    <button type="button" id="mail_cite_btn" class="right" onclick="javascript:mail_cite = true;  cite('#mail_cite_btn')">인증하기</button>
                 </div>
                 <div class="phone-box margn">
-                    <input type="text" name="user_phone" id="sign_user_phone" class="sign-input input-width">
+                    <input type="text" name="user_phone" id="sign_user_phone" class="sign-input input-width" onkeydown="javascript:enterkey_up(5)">
                     <label class="sign-label phone">phone number</label>
                     <span class="notNull-sign box-none" id="sign_phone_null">'-' 포함해서 숫자만 입력해주세요.</span>
                 </div>
@@ -61,7 +61,7 @@
                 <h3 class="terms-title">약관</h3>
                 <div class="terms-box_sign margn border">
                     <label for="terms_all"><input type="checkbox" name="terms_all" id="terms_all"> 전체 동의</label>
-                    <hr color="#cacaca">
+                    <hr>
                     <label for="service">
                         <input type="checkbox" name="service" id="service"
                             class="terms_checkbox checkbox_checked_class"> (필수) 서비스 이용약관 동의

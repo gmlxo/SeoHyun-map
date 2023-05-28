@@ -98,7 +98,8 @@ div.terms-box_sign>label:nth-child(1) {
 div.terms-box_sign>label>input[type="checkbox"] { accent-color: #000; }
 
 /* button css */
-#cite_btn {
+#id_cite_btn,
+#mail_cite_btn {
     margin-right: 10px;
     width: 23%;
     height: 42px;
@@ -129,3 +130,5 @@ div.sign-btn-box>button#sign_in_submit {
     display: block;
     height: 40px;
 }
+
+div.terms>div.terms-box_sign>hr { color: #cacaca; }

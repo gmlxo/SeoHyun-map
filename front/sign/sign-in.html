@@ -20,12 +20,12 @@
         <form action="#" method="post" class="sign-box" name="sign_in_frm">
             <div class="sign-container margn">
                 <div class="id-box margn">
-                    <input type="text" name="user_id" id="sign_user_id" class="sign-input center">
+                    <input type="text" name="user_id" id="sign_user_id" class="sign-input center" onkeydown="javascript:enterkey_in(0)">
                     <label class="sign-label id">ID</label>
-                    <span class="notNull-sign box-none" id="sign-in_id_null">id를 입력해주세요.</span>
+                   <span class="notNull-sign box-none" id="sign-in_id_null">id를 입력해주세요.</span>
                 </div>
                 <div class="pw-box margn">
-                    <input type="password" name="user_pw" id="sign-in_user_pw" class="sign-input center">
+                    <input type="password" name="user_pw" id="sign-in_user_pw" class="sign-input center" onkeydown="javascript:enterkey_in(1)">
                     <label class="sign-label pw center">password</label>
                     <span class="notNull-sign box-none" id="sign-in_pw_null">password를 입력해주세요.</span>
                 </div>
